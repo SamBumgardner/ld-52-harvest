@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Gameplay",
+"language": "GDScript",
+"path": "res://Gameplay.gd"
+}, {
+"base": "Area2D",
+"class": "HarvestTile",
+"language": "GDScript",
+"path": "res://HarvestTile.gd"
+} ]
+_global_script_class_icons={
+"Gameplay": "",
+"HarvestTile": ""
+}
+
 [application]
 
 config/name="ld-52-harvest"
