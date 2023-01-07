@@ -33,7 +33,7 @@ onready var combo_timer = $ComboTimer as Timer
 onready var combo_timer_display = $ComboTimerDisplay as ProgressBar
 onready var combo_growth = $ComboGrowth as ProgressBar
 
-func _on_tile_planted(crop_type):
+func _on_tile_planted(_crop_type):
 	if (plants_since_last_harvest < MAX_PLANT_GRACE_COUNT - multiplier):
 		_start_grace_timer(PLANT_GRACE_DURATION)
 	plants_since_last_harvest += 1
@@ -71,7 +71,6 @@ func _check_combo_growth():
 func _upgrade_multiplier():
 	combo_growth_current -= COMBO_GROWTH_THRESHOLDS[multiplier]
 	multiplier += 1
-	multiplier_text.text = "x" + str(multiplier)
 	emit_signal("multiplier_changed", multiplier)
 
 func _update_combo_threshold():
@@ -95,14 +94,16 @@ func _on_ComboTimer_timeout():
 	crop_chain = 0
 	crop_chain_type = ""
 	emit_signal("crop_chain_changed", crop_chain, crop_chain_type)
-	combo_growth_current = 0
-	combo_growth.value = combo_growth_current / combo_growth_max * 100
+	
 	multiplier -= 1
+	combo_growth_current = 0
+	combo_growth_max = COMBO_GROWTH_THRESHOLDS[multiplier]
+	combo_growth.value = 0
 	emit_signal("multiplier_changed", multiplier)
+	if(multiplier > 1):
+		combo_timer.start(COMBO_TIMER_DURATIONS[multiplier - 1])
 
 func _process(_delta):
-#	if Input.is_action_just_pressed("harvest_mode_toggle"):
-#		_on_tile_harvested("corn", 4, 100)
 	_update_combo_timer_display()
 
 func _update_combo_timer_display():

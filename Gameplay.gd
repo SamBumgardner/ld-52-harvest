@@ -14,7 +14,7 @@ func _ready():
 		connect("harvest_mode_change", child, "_on_harvest_mode_change")
 		(child as HarvestTile).connect_tile_events(score_display)
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("harvest_mode_toggle"):
 		if mode == MOUSE_MODE.PLANT:
 			mode = MOUSE_MODE.HARVEST

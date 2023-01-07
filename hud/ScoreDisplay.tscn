@@ -34,9 +34,11 @@ percent_visible = false
 
 [node name="ComboTimer" type="Timer" parent="."]
 process_mode = 0
+one_shot = true
 
 [node name="GraceTimer" type="Timer" parent="."]
 process_mode = 0
+one_shot = true
 
 [node name="ScoreText" type="Label" parent="."]
 margin_left = 16.0
