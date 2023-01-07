@@ -8,15 +8,52 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "CropData",
+"language": "GDScript",
+"path": "res://data/crop_data.gd"
+}, {
+"base": "Resource",
+"class": "CropsData",
+"language": "GDScript",
+"path": "res://data/crops_data.gd"
+}, {
+"base": "Node",
+"class": "Gameplay",
+"language": "GDScript",
+"path": "res://Gameplay.gd"
+}, {
+"base": "Area2D",
+"class": "HarvestTile",
+"language": "GDScript",
+"path": "res://HarvestTile.gd"
+} ]
+_global_script_class_icons={
+"CropData": "",
+"CropsData": "",
+"Gameplay": "",
+"HarvestTile": ""
+}
+
 [application]
 
 config/name="ld-52-harvest"
-run/main_scene="res://menus/StartMenu.tscn"
+run/main_scene="res://GameplayTest.tscn"
 config/icon="res://icon.png"
+<<<<<<<HEADrun/main_scene="res://GameplayTest.tscn"
 
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+harvest_mode_toggle={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [physics]
 

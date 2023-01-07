@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://data/crop_data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "corn"
+sprite_index_offset = 0
+growth_times = [ 2.0, 2.0, 1.0, 1.0, 1.5 ]
+scores = [ 0, 0, 75, 200, 100 ]
