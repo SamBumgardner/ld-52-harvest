@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://data/crop_data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+name = "pumpkin"
+sprite_index_offset = 6
+growth_times = [ 5.0, 5.0, 3.0, 2.0, 0.5 ]
+scores = [ 0, 0, 300, 450, 250 ]

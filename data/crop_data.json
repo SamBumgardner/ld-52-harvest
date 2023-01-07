@@ -1,0 +1,7 @@
+{
+    "corn": {
+        "sprite_index": 0,
+        "growth_times": [1, 1, 1, 1, 1],
+        "score_values": [0, 0, 100, 100, 100]
+    }
+}

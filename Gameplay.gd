@@ -13,9 +13,6 @@ func _ready():
 	for child in $Field.get_children():
 		connect("harvest_mode_change", child, "_on_harvest_mode_change")
 
-
-	
-
 func _process(delta):
 	if Input.is_action_just_pressed("harvest_mode_toggle"):
 		if mode == MOUSE_MODE.PLANT:

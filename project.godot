@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "CropData",
+"language": "GDScript",
+"path": "res://data/crop_data.gd"
+}, {
+"base": "Resource",
+"class": "CropsData",
+"language": "GDScript",
+"path": "res://data/crops_data.gd"
+}, {
 "base": "Node",
 "class": "Gameplay",
 "language": "GDScript",
@@ -20,6 +30,8 @@ _global_script_classes=[ {
 "path": "res://HarvestTile.gd"
 } ]
 _global_script_class_icons={
+"CropData": "",
+"CropsData": "",
 "Gameplay": "",
 "HarvestTile": ""
 }
