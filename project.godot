@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "HarvestTile",
 "language": "GDScript",
 "path": "res://HarvestTile.gd"
+}, {
+"base": "Node2D",
+"class": "ScoreDisplay",
+"language": "GDScript",
+"path": "res://hud/ScoreDisplay.gd"
 } ]
 _global_script_class_icons={
 "CropData": "",
 "CropsData": "",
 "Gameplay": "",
-"HarvestTile": ""
+"HarvestTile": "",
+"ScoreDisplay": ""
 }
 
 [application]

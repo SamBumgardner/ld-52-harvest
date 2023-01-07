@@ -3,6 +3,7 @@ extends Area2D
 class_name HarvestTile
 
 signal tile_harvested
+signal tile_planted
 
 const MAX_GROWTH_STAGE = 5
 const HARVESTABLE_GROWTH_STAGES = [3, 4, 5]
@@ -21,6 +22,10 @@ var growth_stage = 0;
 
 func _ready():
 	_select_random_crop()
+
+func connect_tile_events(target):
+	connect("tile_harvested", target, "_on_tile_harvested")
+	connect("tile_planted", target, "_on_tile_planted")
 
 func _select_random_crop():
 	randomize()
@@ -49,14 +54,13 @@ func _plant():
 	if !growing:
 		growing = true
 		crop = planting_crop_type
+		emit_signal("tile_planted", crop)
 		_grow()
 		$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1])
 
 func _harvest():
 	if growing && growth_stage in HARVESTABLE_GROWTH_STAGES:
-		emit_signal("tile_harvested", crop, CROP_DATA.crops[crop].scores[growth_stage - 1])
-		print("scored ", crop, " at growth stage ", growth_stage, " for ", 
-			CROP_DATA.crops[crop].scores[growth_stage - 1], " points")
+		emit_signal("tile_harvested", crop, growth_stage, CROP_DATA.crops[crop].scores[growth_stage - 1])
 		_remove_plant()
 
 func _on_Growth_timeout():
