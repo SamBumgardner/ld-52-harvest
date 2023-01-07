@@ -8,7 +8,7 @@ func _ready():
 		$TitleContentContainer/ButtonsContainer/StartButton.grab_focus()
 
 func _on_StartButton_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://GameplayTest.tscn")
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
