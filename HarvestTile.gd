@@ -23,6 +23,7 @@ func _ready():
 	_select_random_crop()
 
 func _select_random_crop():
+	randomize()
 	planting_crop_type = CROP_DATA.crops.keys()[randi() % CROP_DATA.crops.size()]
 
 func _on_harvest_mode_change(newMode):
