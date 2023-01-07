@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://hud/ScoreDisplay.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Roboto/Roboto-Black.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Roboto/Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://hud/ChainText.gd" type="Script" id=4]
+[ext_resource path="res://hud/MultiplierText.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 72
+font_data = ExtResource( 3 )
+
+[node name="ScoreDisplay" type="Node2D"]
+position = Vector2( 16, 400 )
+script = ExtResource( 1 )
+
+[node name="ComboGrowth" type="ProgressBar" parent="."]
+margin_top = 152.0
+margin_right = 152.0
+margin_bottom = 184.0
+rect_rotation = 270.0
+percent_visible = false
+
+[node name="ComboTimerDisplay" type="ProgressBar" parent="."]
+margin_left = 32.0
+margin_top = 112.0
+margin_right = 216.0
+margin_bottom = 152.0
+percent_visible = false
+
+[node name="ComboTimer" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+
+[node name="GraceTimer" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+
+[node name="ScoreText" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 152.0
+margin_right = 176.0
+margin_bottom = 192.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+
+[node name="MultiplierText" type="Label" parent="."]
+margin_left = 56.0
+margin_top = 16.0
+margin_right = 184.0
+margin_bottom = 101.0
+custom_fonts/font = SubResource( 2 )
+text = "x1"
+script = ExtResource( 5 )
+
+[node name="ChainText" type="Label" parent="."]
+margin_left = 304.0
+margin_top = -376.0
+margin_right = 688.0
+margin_bottom = -291.0
+grow_horizontal = 2
+custom_fonts/font = SubResource( 2 )
+align = 1
+script = ExtResource( 4 )
+
+[connection signal="crop_chain_changed" from="." to="ChainText" method="_on_ScoreDisplay_crop_chain_changed"]
+[connection signal="multiplier_changed" from="." to="MultiplierText" method="_on_ScoreDisplay_multiplier_changed"]
+[connection signal="timeout" from="ComboTimer" to="." method="_on_ComboTimer_timeout"]
+[connection signal="timeout" from="GraceTimer" to="." method="_on_GraceTimer_timeout"]
