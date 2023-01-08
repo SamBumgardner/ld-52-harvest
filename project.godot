@@ -9,15 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Sprite",
+"class": "CropBadge",
+"language": "GDScript",
+"path": "res://hud/plant_queue/CropBadge.gd"
+}, {
 "base": "Resource",
 "class": "CropData",
 "language": "GDScript",
-"path": "res://data/crop_data.gd"
+"path": "res://data/crops/crop_data.gd"
 }, {
 "base": "Resource",
 "class": "CropsData",
 "language": "GDScript",
-"path": "res://data/crops_data.gd"
+"path": "res://data/crops/crops_data.gd"
 }, {
 "base": "Node",
 "class": "Gameplay",
@@ -29,16 +34,29 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://HarvestTile.gd"
 }, {
+"base": "Resource",
+"class": "PlantQueue",
+"language": "GDScript",
+"path": "res://data/plant_queues/plant_queue.gd"
+}, {
+"base": "Node2D",
+"class": "PlantQueueDisplay",
+"language": "GDScript",
+"path": "res://hud/plant_queue/PlantQueueDisplay.gd"
+}, {
 "base": "Node2D",
 "class": "ScoreDisplay",
 "language": "GDScript",
-"path": "res://hud/ScoreDisplay.gd"
+"path": "res://hud/score/ScoreDisplay.gd"
 } ]
 _global_script_class_icons={
+"CropBadge": "",
 "CropData": "",
 "CropsData": "",
 "Gameplay": "",
 "HarvestTile": "",
+"PlantQueue": "",
+"PlantQueueDisplay": "",
 "ScoreDisplay": ""
 }
 
