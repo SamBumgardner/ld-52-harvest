@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Gameplay.gd" type="Script" id=1]
 [ext_resource path="res://HarvestTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://hud/score/ScoreDisplay.tscn" type="PackedScene" id=3]
 [ext_resource path="res://menus/BackToLevelSelectButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hud/plant_queue/PlantQueueDisplay.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -62,3 +63,5 @@ position = Vector2( 608, 400 )
 position = Vector2( 32, 400 )
 
 [node name="BackToLevelSelectButton" parent="." instance=ExtResource( 4 )]
+
+[node name="PlantQueueDisplay" parent="." instance=ExtResource( 5 )]
