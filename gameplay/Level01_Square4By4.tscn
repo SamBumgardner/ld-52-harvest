@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Gameplay.gd" type="Script" id=1]
 [ext_resource path="res://HarvestTile.tscn" type="PackedScene" id=2]
 [ext_resource path="res://hud/ScoreDisplay.tscn" type="PackedScene" id=3]
+[ext_resource path="res://menus/BackToLevelSelectButton.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
@@ -59,3 +60,5 @@ position = Vector2( 608, 400 )
 
 [node name="ScoreDisplay" parent="." instance=ExtResource( 3 )]
 position = Vector2( 32, 400 )
+
+[node name="BackToLevelSelectButton" parent="." instance=ExtResource( 4 )]
