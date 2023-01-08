@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource( 1 )
-crops = ["Corn", "Potato", "Corn", "Potato", "Corn", "Potato", "Corn", "Potato", "Pumpkin" ]
-counts = [4, 5, 4, 4, 4, 4, 4, 4, 16]
+crops = [ "Corn", "Potato", "Corn", "Potato", "Corn", "Potato", "Corn", "Potato", "Pumpkin" ]
+counts = [ 4, 5, 4, 4, 4, 4, 4, 4, 16 ]
