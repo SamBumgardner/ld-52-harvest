@@ -8,9 +8,9 @@ signal tile_planted
 const MAX_GROWTH_STAGE = 5
 const HARVESTABLE_GROWTH_STAGES = [3, 4, 5]
 
-var CROP_DATA = preload("res://data/crops_data.tres")
+var CROP_DATA = preload("res://data/crops/crops_data.tres")
 
-var planting_crop_type = "corn"
+var planting_crop_type = "unset"
 
 enum MOUSE_MODE {PLANT, HARVEST}
 var mode = MOUSE_MODE.PLANT
@@ -20,16 +20,12 @@ var growing = false;
 var crop = "";
 var growth_stage = 0;
 
-func _ready():
-	_select_random_crop()
-
-func connect_tile_events(target):
+func connect_all_tile_events(target):
 	connect("tile_harvested", target, "_on_tile_harvested")
 	connect("tile_planted", target, "_on_tile_planted")
 
-func _select_random_crop():
-	randomize()
-	planting_crop_type = CROP_DATA.crops.keys()[randi() % CROP_DATA.crops.size()]
+func _on_crop_change(new_crop):
+	planting_crop_type = new_crop
 
 func _on_harvest_mode_change(newMode):
 	mode = newMode
@@ -51,7 +47,7 @@ func _mouse_action():
 			_harvest()
 	
 func _plant():
-	if !growing:
+	if !growing && !planting_crop_type.empty():
 		growing = true
 		crop = planting_crop_type
 		emit_signal("tile_planted", crop)
