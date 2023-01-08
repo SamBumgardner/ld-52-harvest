@@ -5,7 +5,7 @@ class_name Gameplay
 signal harvest_mode_change
 signal level_ended
 
-var plant_queue:PlantQueue = preload("res://data/plant_queues/levels/gameplay_test_queue.tres")
+export var plant_queue:Resource = preload("res://data/plant_queues/levels/placeholder.tres")
 var harvest_cursor = preload("res://art/scythe.png")
 var plant_cursor = preload("res://art/seed_satchel.png")
 
@@ -20,6 +20,8 @@ export var level_number = 0
 var level_ended = false
 
 func _ready():
+	plant_queue_display.parent_ready()
+	
 	Input.set_custom_mouse_cursor(harvest_cursor, 0, Vector2(32, 0))
 	
 	connect("level_ended", level_complete_overlay, "_on_level_ended")

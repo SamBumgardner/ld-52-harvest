@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://data/plant_queues/levels/level_01_queue.tres" type="Resource" id=1]
+[ext_resource path="res://gameplay/HarvestTile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gameplay/LevelTemplate.tscn" type="PackedScene" id=3]
+
+[node name="Main" instance=ExtResource( 3 )]
+plant_queue = ExtResource( 1 )
+level_number = 1
+
+[node name="HarvestTile2" parent="Field" index="0" instance=ExtResource( 2 )]
+position = Vector2( 512, 224 )
+
+[node name="HarvestTile4" parent="Field" index="1" instance=ExtResource( 2 )]
+position = Vector2( 512, 288 )
+
+[node name="HarvestTile1" parent="Field" index="2" instance=ExtResource( 2 )]
+position = Vector2( 448, 224 )
+
+[node name="HarvestTile3" parent="Field" index="3" instance=ExtResource( 2 )]
+position = Vector2( 448, 288 )
+
+[node name="HarvestTile5" parent="Field" index="4" instance=ExtResource( 2 )]
+position = Vector2( 576, 224 )
+
+[node name="HarvestTile6" parent="Field" index="5" instance=ExtResource( 2 )]
+position = Vector2( 576, 288 )
+
+[node name="HarvestTile7" parent="Field" index="6" instance=ExtResource( 2 )]
+position = Vector2( 448, 352 )
+
+[node name="HarvestTile8" parent="Field" index="7" instance=ExtResource( 2 )]
+position = Vector2( 512, 352 )
+
+[node name="HarvestTile9" parent="Field" index="8" instance=ExtResource( 2 )]
+position = Vector2( 576, 352 )
