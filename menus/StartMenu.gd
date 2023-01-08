@@ -1,8 +1,9 @@
 extends Control
 
+onready var start_button = $TitleContentContainer/ButtonsContainer/StartButton as Button
+
 func _ready():
-	if $TitleContentContainer/ButtonsContainer/StartButton:
-		$TitleContentContainer/ButtonsContainer/StartButton.grab_focus()
+	start_button.grab_focus()
 
 func _on_StartButton_pressed():
 	get_tree().change_scene("res://menus/LevelSelect.tscn")
