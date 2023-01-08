@@ -2,17 +2,10 @@ extends Control
 
 func _ready():
 	Input.set_custom_mouse_cursor(null, CURSOR_ARROW)
-	if $TitleContentContainer/ButtonsContainer/LevelButton01:
-		$TitleContentContainer/ButtonsContainer/LevelButton01.grab_focus()
+	$ButtonsContainer/LevelButton00.grab_focus()
+	for button in $ButtonsContainer.get_children():
+		var level_suffix = str(button.level_index) if button.level_index > 9 else "0" + str(button.level_index)
+		button.connect("pressed", self, "_on_LevelButton_pressed", [level_suffix])
 
-func _on_LevelButton01_pressed():
-	get_tree().change_scene("res://gameplay/Level01_Square4By4.tscn")
-
-func _on_LevelButton02_pressed():
-	get_tree().change_scene("res://gameplay/Level02_RingOf15.tscn")
-
-func _on_LevelButton03_pressed():
-	get_tree().change_scene("res://gameplay/Level03_RoadShapeTOf22.tscn")
-
-func _on_BackButton_pressed():
-	get_tree().change_scene("res://menus/StartMenu.tscn")
+func _on_LevelButton_pressed(level_suffix):
+	get_tree().change_scene("res://gameplay/levels/Level_" + level_suffix + ".tscn")

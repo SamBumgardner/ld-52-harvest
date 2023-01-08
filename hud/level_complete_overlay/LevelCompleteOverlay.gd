@@ -11,13 +11,15 @@ func _on_LevelSelectButton_pressed():
 
 func _on_level_ended(score, star_thresholds, high_score, level_index):
 	score_label.text = "Score:\n" + str(score)
-	star_progress.value = float(score) / (star_thresholds as Array).back() * 100
+
 	var total_stars = 0
 	for threshold in star_thresholds:
 		if threshold > score:
 			next_star_label.text = "Next Star at:\n" + str(threshold)
 			break
 		total_stars += 1
+	
+	star_progress.value = total_stars * 100
 	
 	if total_stars == 3:
 		if score > high_score:
