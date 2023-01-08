@@ -41,6 +41,9 @@ func connect_all_tile_events(target):
 	connect("tile_harvested", target, "_on_tile_harvested")
 	connect("tile_planted", target, "_on_tile_planted")
 
+func empty():
+	return growth_stage == 0
+
 func _on_crop_change(new_crop):
 	planting_crop_type = new_crop
 

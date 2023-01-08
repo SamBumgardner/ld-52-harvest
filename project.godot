@@ -67,6 +67,10 @@ run/main_scene="res://menus/StartMenu.tscn"
 config/icon="res://icon.png"
 <<<<<<<HEADrun/main_scene="res://GameplayTest.tscn"
 
+[autoload]
+
+HighScoreMemory="*res://HighScoreMemory.gd"
+
 [global]
 
 cursor=false

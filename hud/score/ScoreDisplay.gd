@@ -4,6 +4,7 @@ class_name ScoreDisplay
 
 signal multiplier_changed
 signal crop_chain_changed
+signal final_score
 
 const RIPE_GROWTH_STAGE = 4
 const MAX_MULTIPLIER = 8
@@ -95,7 +96,8 @@ func _on_ComboTimer_timeout():
 	crop_chain_type = ""
 	emit_signal("crop_chain_changed", crop_chain, crop_chain_type)
 	
-	multiplier -= 1
+	if (multiplier > 1):
+		multiplier -= 1
 	combo_growth_current = 0
 	combo_growth_max = COMBO_GROWTH_THRESHOLDS[multiplier]
 	combo_growth.value = 0
@@ -108,8 +110,3 @@ func _process(_delta):
 
 func _update_combo_timer_display():
 	combo_timer_display.value = combo_timer.time_left / combo_timer.wait_time * 100
-
-
-
-
-
