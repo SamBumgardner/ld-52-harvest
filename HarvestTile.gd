@@ -10,6 +10,15 @@ const HARVESTABLE_GROWTH_STAGES = [3, 4, 5]
 
 var CROP_DATA = preload("res://data/crops/crops_data.tres")
 
+var tile_textures = [
+	preload("res://art/harvest_tile.png"), 
+	preload("res://art/harvest_tile_fast.png"),
+	preload("res://art/harvest_tile_slow.png")
+]
+enum GROWTH_MODE {NORMAL, FAST, SLOW}
+export var tile_growth_mode = GROWTH_MODE.NORMAL
+var growth_duration_multiplier = 1
+
 var planting_crop_type = "unset"
 
 enum MOUSE_MODE {PLANT, HARVEST}
@@ -19,6 +28,14 @@ var mouse_hovering = false
 var growing = false;
 var crop = "";
 var growth_stage = 0;
+
+func _ready():
+	$Sprite.texture = tile_textures[tile_growth_mode]
+	match tile_growth_mode:
+		GROWTH_MODE.FAST:
+			growth_duration_multiplier = .5
+		GROWTH_MODE.SLOW:
+			growth_duration_multiplier = 2
 
 func connect_all_tile_events(target):
 	connect("tile_harvested", target, "_on_tile_harvested")
@@ -72,7 +89,7 @@ func _grow():
 	if growth_stage == 3:
 		$Sprite.frame += CROP_DATA.crops[crop].sprite_index_offset
 	$Sprite.frame += 1 
-	$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1])
+	$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1] * growth_duration_multiplier)
 
 func _die():
 	_remove_plant()
