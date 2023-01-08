@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Gameplay.gd" type="Script" id=1]
+[ext_resource path="res://HarvestTile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://hud/ScoreDisplay.tscn" type="PackedScene" id=3]
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Field" type="Node" parent="."]
+
+[node name="HarvestTile" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 510, 164 )
+
+[node name="HarvestTile2" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 574, 176 )
+
+[node name="HarvestTile3" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 638, 232 )
+
+[node name="HarvestTile4" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 660, 298 )
+
+[node name="HarvestTile5" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 639, 365 )
+
+[node name="HarvestTile6" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 575, 433 )
+
+[node name="HarvestTile7" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 512, 450 )
+
+[node name="HarvestTile8" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 447, 432 )
+
+[node name="HarvestTile9" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 385, 368 )
+
+[node name="HarvestTile10" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 368, 305 )
+
+[node name="HarvestTile11" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 383, 240 )
+
+[node name="HarvestTile12" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 443, 175 )
+
+[node name="HarvestTile13" parent="Field" instance=ExtResource( 2 )]
+position = Vector2( 511, 299 )
+
+[node name="ScoreDisplay" parent="." instance=ExtResource( 3 )]
+position = Vector2( 32, 400 )
