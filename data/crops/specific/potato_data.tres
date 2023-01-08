@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=2 format=2]
 
-[ext_resource path="res://data/crop_data.gd" type="Script" id=1]
+[ext_resource path="res://data/crops/crop_data.gd" type="Script" id=1]
 
 [resource]
 script = ExtResource( 1 )
@@ -8,3 +8,4 @@ name = "Potato"
 sprite_index_offset = 3
 growth_times = [ 4.0, 2.0, 1.5, 1.5, 1.0 ]
 scores = [ 0, 0, 200, 350, 150 ]
+badge_index_offset = 1
