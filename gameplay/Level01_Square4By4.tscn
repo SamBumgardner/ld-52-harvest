@@ -62,6 +62,6 @@ position = Vector2( 608, 400 )
 [node name="ScoreDisplay" parent="." instance=ExtResource( 3 )]
 position = Vector2( 32, 400 )
 
-[node name="BackToLevelSelectButton" parent="." instance=ExtResource( 4 )]
-
 [node name="PlantQueueDisplay" parent="." instance=ExtResource( 5 )]
+
+[node name="BackToLevelSelectButton" parent="." instance=ExtResource( 4 )]
