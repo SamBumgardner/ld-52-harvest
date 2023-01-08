@@ -45,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ld-52-harvest"
-run/main_scene="res://GameplayTest.tscn"
+run/main_scene="res://menus/StartMenu.tscn"
 config/icon="res://icon.png"
 <<<<<<<HEADrun/main_scene="res://GameplayTest.tscn"
 
