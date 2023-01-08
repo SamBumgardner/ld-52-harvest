@@ -13,7 +13,7 @@ var CROP_DATA = preload("res://data/crops/crops_data.tres")
 var planting_crop_type = "unset"
 
 enum MOUSE_MODE {PLANT, HARVEST}
-var mode = MOUSE_MODE.PLANT
+var mode = MOUSE_MODE.HARVEST
 var mouse_hovering = false
 
 var growing = false;
