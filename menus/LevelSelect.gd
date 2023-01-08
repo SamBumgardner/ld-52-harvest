@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	Input.set_custom_mouse_cursor(null, CURSOR_ARROW)
 	if $TitleContentContainer/ButtonsContainer/LevelButton01:
 		$TitleContentContainer/ButtonsContainer/LevelButton01.grab_focus()
 
