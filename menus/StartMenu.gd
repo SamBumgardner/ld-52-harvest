@@ -4,6 +4,8 @@ onready var start_button = $TitleContentContainer/ButtonsContainer/StartButton a
 
 func _ready():
 	start_button.grab_focus()
+	if OS.get_name() == "HTML5":
+		$TitleContentContainer/ButtonsContainer/QuitButton.visible = false
 
 func _on_CreditsButton_pressed():
 	get_tree().change_scene("res://menus/CreditsMenu.tscn")
