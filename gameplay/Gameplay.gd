@@ -15,11 +15,15 @@ var mode = MOUSE_MODE.HARVEST
 onready var score_display = $ScoreDisplay as ScoreDisplay
 onready var plant_queue_display = $PlantQueueDisplay as PlantQueueDisplay
 onready var level_complete_overlay = $LevelCompleteOverlay
+onready var LevelName = $LevelName as Label
 
 export var level_number = 0
+export var level_name = ""
 var level_ended = false
 
 func _ready():
+	LevelName.text = level_name
+	
 	plant_queue_display.parent_ready()
 	
 	Input.set_custom_mouse_cursor(harvest_cursor, 0, Vector2(32, 0))

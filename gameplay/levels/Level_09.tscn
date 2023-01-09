@@ -7,6 +7,7 @@
 [node name="Main" instance=ExtResource( 1 )]
 plant_queue = ExtResource( 3 )
 level_number = 9
+level_name = "Greenhouse"
 
 [node name="HarvestTile" parent="Field" index="0" instance=ExtResource( 2 )]
 position = Vector2( 480, 224 )
