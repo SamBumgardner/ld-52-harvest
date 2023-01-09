@@ -7,6 +7,7 @@
 [node name="Main" instance=ExtResource( 1 )]
 plant_queue = ExtResource( 3 )
 level_number = 8
+level_name = "Scatter Plot"
 
 [node name="HarvestTile" parent="Field" index="0" instance=ExtResource( 2 )]
 position = Vector2( 352, 416 )
