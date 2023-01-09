@@ -16,6 +16,7 @@ onready var score_display = $ScoreDisplay as ScoreDisplay
 onready var plant_queue_display = $PlantQueueDisplay as PlantQueueDisplay
 onready var level_complete_overlay = $LevelCompleteOverlay
 onready var LevelName = $LevelName as Label
+onready var harvest_mode_symbol = $HarvestModeWebWorkaround as Sprite
 
 export var level_number = 0
 export var level_name = ""
@@ -41,6 +42,25 @@ func _ready():
 		(child as HarvestTile).planting_crop_type = plant_queue_display.get_current_crop()
 	
 	$BackgroundMusic.play()
+	
+	_set_up_hacky_plant_queue()
+	_web_cursor_workaround()
+
+func _set_up_hacky_plant_queue():
+	var hackyQueueBadges = $HackyPlantQueue.get_children()
+	for i in hackyQueueBadges.size():
+		if i < plant_queue.crops.size():
+			hackyQueueBadges[i].set_sprite_offset(plant_queue.crops_data.crops[plant_queue.crops[i]].badge_index_offset)
+			hackyQueueBadges[i].set_crop_count(plant_queue.counts[i])
+		else:
+			hackyQueueBadges[i].visible = false
+
+func _web_cursor_workaround():
+	if (OS.get_name() == "HTML5"):
+		harvest_mode_symbol.visible = true
+		harvest_mode_symbol.frame = mode
+	else:
+		harvest_mode_symbol.visible = false
 
 func _process(_delta):
 	_check_harvest_mode_toggle()
@@ -51,9 +71,11 @@ func _check_harvest_mode_toggle():
 		if mode == MOUSE_MODE.PLANT:
 			mode = MOUSE_MODE.HARVEST
 			Input.set_custom_mouse_cursor(harvest_cursor, 0, Vector2(32, 0))
+			
 		else:
 			mode = MOUSE_MODE.PLANT
 			Input.set_custom_mouse_cursor(plant_cursor, 0, Vector2(32, 0))
+		harvest_mode_symbol.frame = mode
 		emit_signal("harvest_mode_change", mode)
 
 func _check_level_ended():
