@@ -31,3 +31,5 @@ func _on_level_ended(score, star_thresholds, high_score, level_index):
 	
 	visible = true
 	
+	$Music_Victory.play()
+	
