@@ -36,7 +36,7 @@ func _ready():
 		plant_queue_display.connect("crop_change", child, "_on_crop_change")
 		(child as HarvestTile).planting_crop_type = plant_queue_display.get_current_crop()
 	
-	$BackgroundMusic_AllParts.play()
+	_play_background_music_start()
 
 func _process(_delta):
 	_check_harvest_mode_toggle()
@@ -61,5 +61,12 @@ func _check_level_ended():
 		if no_active_plants:
 			level_ended = true
 			$BackgroundMusic_AllParts.stop()
+			$BackgroundMusic_Group1.stop()
 			emit_signal("level_ended", score_display.score, plant_queue.star_score_thresholds, 
 				HighScoreMemory.level_scores[level_number].high_score, level_number)
+
+func _play_background_music_start():
+	$BackgroundMusic_Group1.volume_db = 0
+	$BackgroundMusic_AllParts.volume_db = -80
+	$BackgroundMusic_Group1.play()
+	$BackgroundMusic_AllParts.play()

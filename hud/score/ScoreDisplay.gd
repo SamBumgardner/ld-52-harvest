@@ -74,6 +74,7 @@ func _upgrade_multiplier():
 	combo_growth_current -= COMBO_GROWTH_THRESHOLDS[multiplier]
 	multiplier += 1
 	_play_sfx_increment_combo(multiplier)
+	_adjust_volume_of_music(multiplier)
 	emit_signal("multiplier_changed", multiplier)
 
 func _update_combo_threshold():
@@ -132,3 +133,22 @@ func _play_sfx_increment_combo(multiplier):
 		$SFX_IncrementComboTo8.play()
 	else:
 		return
+
+func _adjust_volume_of_music(multiplier):
+	if multiplier == 1:
+		_turn_on_music_groups_up_to(1)
+	elif multiplier > 1:
+		_turn_on_music_groups_up_to(2)
+
+func _turn_on_music_groups_up_to(_group_number):
+	# Do not change the volume if all of the music is off.
+	# Bug: Crashes from not finding the music player nodes.
+	if not $BackgroundMusic_Group1.playing and not $BackgroundMusic_AllParts.playing:
+		return
+	elif _group_number == 1 and $BackgroundMusic_Group1.volume_db != 0 and $BackgroundMusic_AllParts.volume_db != -80:
+			$BackgroundMusic_Group1.volume_db = 0
+			$BackgroundMusic_AllParts.volume_db = -80
+	elif _group_number > 1 and $BackgroundMusic_Group1.volume_db != -80 and $BackgroundMusic_AllParts.volume_db != 0:
+		$BackgroundMusic_Group1.volume_db = -80
+		$BackgroundMusic_AllParts.volume_db = 0
+		
