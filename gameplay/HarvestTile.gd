@@ -71,12 +71,14 @@ func _plant():
 		growing = true
 		crop = planting_crop_type
 		emit_signal("tile_planted", crop)
+		$SFX_Plant.play()
 		_grow()
 		$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1])
 
 func _harvest():
 	if growing && growth_stage in HARVESTABLE_GROWTH_STAGES:
 		emit_signal("tile_harvested", crop, growth_stage, CROP_DATA.crops[crop].scores[growth_stage - 1])
+		$SFX_Harvest.play()
 		_remove_plant()
 
 func _on_Growth_timeout():
