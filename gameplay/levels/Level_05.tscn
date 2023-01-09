@@ -1,0 +1,105 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://gameplay/HarvestTile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://gameplay/LevelTemplate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/plant_queues/levels/level_05_queue.tres" type="Resource" id=3]
+
+[node name="Main" instance=ExtResource( 2 )]
+plant_queue = ExtResource( 3 )
+level_number = 5
+
+[node name="HarvestTile" parent="Field" index="0" instance=ExtResource( 1 )]
+position = Vector2( 320, 416 )
+tile_growth_mode = 1
+
+[node name="HarvestTile2" parent="Field" index="1" instance=ExtResource( 1 )]
+position = Vector2( 320, 352 )
+tile_growth_mode = 1
+
+[node name="HarvestTile3" parent="Field" index="2" instance=ExtResource( 1 )]
+position = Vector2( 320, 288 )
+tile_growth_mode = 1
+
+[node name="HarvestTile4" parent="Field" index="3" instance=ExtResource( 1 )]
+position = Vector2( 320, 224 )
+tile_growth_mode = 1
+
+[node name="HarvestTile9" parent="Field" index="4" instance=ExtResource( 1 )]
+position = Vector2( 320, 160 )
+tile_growth_mode = 1
+
+[node name="HarvestTile10" parent="Field" index="5" instance=ExtResource( 1 )]
+position = Vector2( 384, 160 )
+tile_growth_mode = 1
+
+[node name="HarvestTile11" parent="Field" index="6" instance=ExtResource( 1 )]
+position = Vector2( 448, 160 )
+tile_growth_mode = 1
+
+[node name="HarvestTile12" parent="Field" index="7" instance=ExtResource( 1 )]
+position = Vector2( 512, 160 )
+tile_growth_mode = 1
+
+[node name="HarvestTile13" parent="Field" index="8" instance=ExtResource( 1 )]
+position = Vector2( 576, 160 )
+tile_growth_mode = 1
+
+[node name="HarvestTile14" parent="Field" index="9" instance=ExtResource( 1 )]
+position = Vector2( 640, 160 )
+tile_growth_mode = 1
+
+[node name="HarvestTile15" parent="Field" index="10" instance=ExtResource( 1 )]
+position = Vector2( 704, 160 )
+tile_growth_mode = 1
+
+[node name="HarvestTile16" parent="Field" index="11" instance=ExtResource( 1 )]
+position = Vector2( 768, 160 )
+tile_growth_mode = 1
+
+[node name="HarvestTile17" parent="Field" index="12" instance=ExtResource( 1 )]
+position = Vector2( 320, 480 )
+tile_growth_mode = 1
+
+[node name="HarvestTile18" parent="Field" index="13" instance=ExtResource( 1 )]
+position = Vector2( 384, 480 )
+tile_growth_mode = 1
+
+[node name="HarvestTile19" parent="Field" index="14" instance=ExtResource( 1 )]
+position = Vector2( 448, 480 )
+tile_growth_mode = 1
+
+[node name="HarvestTile20" parent="Field" index="15" instance=ExtResource( 1 )]
+position = Vector2( 512, 480 )
+tile_growth_mode = 1
+
+[node name="HarvestTile21" parent="Field" index="16" instance=ExtResource( 1 )]
+position = Vector2( 576, 480 )
+tile_growth_mode = 1
+
+[node name="HarvestTile22" parent="Field" index="17" instance=ExtResource( 1 )]
+position = Vector2( 640, 480 )
+tile_growth_mode = 1
+
+[node name="HarvestTile23" parent="Field" index="18" instance=ExtResource( 1 )]
+position = Vector2( 704, 480 )
+tile_growth_mode = 1
+
+[node name="HarvestTile24" parent="Field" index="19" instance=ExtResource( 1 )]
+position = Vector2( 768, 480 )
+tile_growth_mode = 1
+
+[node name="HarvestTile5" parent="Field" index="20" instance=ExtResource( 1 )]
+position = Vector2( 768, 416 )
+tile_growth_mode = 1
+
+[node name="HarvestTile6" parent="Field" index="21" instance=ExtResource( 1 )]
+position = Vector2( 768, 352 )
+tile_growth_mode = 1
+
+[node name="HarvestTile7" parent="Field" index="22" instance=ExtResource( 1 )]
+position = Vector2( 768, 288 )
+tile_growth_mode = 1
+
+[node name="HarvestTile8" parent="Field" index="23" instance=ExtResource( 1 )]
+position = Vector2( 768, 224 )
+tile_growth_mode = 1
