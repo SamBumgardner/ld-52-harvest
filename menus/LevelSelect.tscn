@@ -5,15 +5,13 @@
 [ext_resource path="res://menus/LevelSelect.gd" type="Script" id=3]
 [ext_resource path="res://art/start_menu_background.png" type="Texture" id=4]
 [ext_resource path="res://art/ld-52-level-select_v1.ogg" type="AudioStream" id=5]
+[ext_resource path="res://menus/LevelButton.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 2 )
 
 [node name="LevelSelect" type="Control"]
@@ -34,64 +32,76 @@ anchor_left = 0.33
 anchor_top = 0.25
 anchor_right = 0.66
 anchor_bottom = 0.75
+margin_left = -27.54
+margin_right = 27.54
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
 [node name="Title" type="Label" parent="TitleContentContainer"]
-margin_top = 27.0
+margin_top = 85.0
 margin_right = 393.0
-margin_bottom = 112.0
+margin_bottom = 170.0
 custom_fonts/font = SubResource( 1 )
 text = "Level Select"
 align = 1
 
 [node name="SubTitle" type="Label" parent="TitleContentContainer"]
-margin_top = 116.0
+margin_top = 174.0
 margin_right = 393.0
-margin_bottom = 157.0
+margin_bottom = 215.0
 custom_fonts/font = SubResource( 2 )
 text = "Ludum Dare 52 Game Jam Entry
 by Sam and Noah Bumgardner"
 align = 1
 
-[node name="ButtonsContainer" type="VBoxContainer" parent="TitleContentContainer"]
-margin_top = 161.0
-margin_right = 393.0
-margin_bottom = 273.0
+[node name="ButtonsContainer" type="GridContainer" parent="."]
+anchor_left = 0.33
+anchor_top = 0.62
+anchor_right = 0.66
+anchor_bottom = 0.8
+grow_horizontal = 2
+custom_constants/vseparation = 15
+columns = 3
 
-[node name="LevelButton01" type="Button" parent="TitleContentContainer/ButtonsContainer"]
-margin_right = 393.0
-margin_bottom = 25.0
-custom_fonts/font = SubResource( 3 )
-text = "Level 1"
+[node name="LevelButton00" parent="ButtonsContainer" instance=ExtResource( 6 )]
+margin_right = 110.0
+margin_bottom = 47.0
 
-[node name="LevelButton02" type="Button" parent="TitleContentContainer/ButtonsContainer"]
-margin_top = 29.0
-margin_right = 393.0
-margin_bottom = 54.0
-custom_fonts/font = SubResource( 3 )
-text = "Level 2"
+[node name="LevelButton01" parent="ButtonsContainer" instance=ExtResource( 6 )]
+margin_left = 114.0
+margin_right = 224.0
+margin_bottom = 47.0
+level_index = 1
 
-[node name="LevelButton03" type="Button" parent="TitleContentContainer/ButtonsContainer"]
-margin_top = 58.0
-margin_right = 393.0
-margin_bottom = 83.0
-custom_fonts/font = SubResource( 3 )
-text = "Level 3"
+[node name="LevelButton02" parent="ButtonsContainer" instance=ExtResource( 6 )]
+margin_left = 228.0
+margin_right = 337.0
+margin_bottom = 47.0
+level_index = 2
 
-[node name="BackButton" type="Button" parent="TitleContentContainer/ButtonsContainer"]
-margin_top = 87.0
-margin_right = 393.0
-margin_bottom = 112.0
-custom_fonts/font = SubResource( 3 )
-text = "Back"
+[node name="LevelButton03" parent="ButtonsContainer" instance=ExtResource( 6 )]
+margin_top = 62.0
+margin_right = 110.0
+margin_bottom = 108.0
+level_index = 3
+
+[node name="LevelButton04" parent="ButtonsContainer" instance=ExtResource( 6 )]
+visible = false
+margin_left = 114.0
+margin_top = 62.0
+margin_right = 224.0
+margin_bottom = 108.0
+level_index = 4
+
+[node name="LevelButton05" parent="ButtonsContainer" instance=ExtResource( 6 )]
+visible = false
+margin_left = 228.0
+margin_top = 62.0
+margin_right = 337.0
+margin_bottom = 108.0
+level_index = 5
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 autoplay = true
-
-[connection signal="pressed" from="TitleContentContainer/ButtonsContainer/LevelButton01" to="." method="_on_LevelButton01_pressed"]
-[connection signal="pressed" from="TitleContentContainer/ButtonsContainer/LevelButton02" to="." method="_on_LevelButton02_pressed"]
-[connection signal="pressed" from="TitleContentContainer/ButtonsContainer/LevelButton03" to="." method="_on_LevelButton03_pressed"]
-[connection signal="pressed" from="TitleContentContainer/ButtonsContainer/BackButton" to="." method="_on_BackButton_pressed"]

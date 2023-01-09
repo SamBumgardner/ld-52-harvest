@@ -27,12 +27,12 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "Gameplay",
 "language": "GDScript",
-"path": "res://Gameplay.gd"
+"path": "res://gameplay/Gameplay.gd"
 }, {
 "base": "Area2D",
 "class": "HarvestTile",
 "language": "GDScript",
-"path": "res://HarvestTile.gd"
+"path": "res://gameplay/HarvestTile.gd"
 }, {
 "base": "Resource",
 "class": "PlantQueue",
@@ -66,6 +66,10 @@ config/name="ld-52-harvest"
 run/main_scene="res://menus/StartMenu.tscn"
 config/icon="res://icon.png"
 <<<<<<<HEADrun/main_scene="res://GameplayTest.tscn"
+
+[autoload]
+
+HighScoreMemory="*res://global/HighScoreMemory.gd"
 
 [global]
 
