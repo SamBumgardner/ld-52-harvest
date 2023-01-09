@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://data/plant_queues/plant_queue.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+star_score_thresholds = [ 45000, 60000, 70000 ]
+crops = [ "Pumpkin", "Corn", "Potato", "Corn", "Pumpkin", "Corn", "Potato", "Corn", "Pumpkin", "Potato", "Corn", "Pumpkin", "Potato", "Corn", "Potato", "Pumpkin" ]
+counts = [ 1, 1, 2, 1, 2, 1, 2, 1, 1, 4, 4, 4, 4, 4, 8, 12 ]
