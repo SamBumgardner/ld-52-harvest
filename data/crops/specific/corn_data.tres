@@ -6,6 +6,6 @@
 script = ExtResource( 1 )
 name = "Corn"
 sprite_index_offset = 0
-growth_times = [ 2.0, 2.0, 1.0, 1.0, 1.5 ]
+growth_times = [ 2.0, 2.0, 1.0, 1.5, 1.5 ]
 scores = [ 0, 0, 75, 200, 100 ]
 badge_index_offset = 0

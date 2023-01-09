@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource( 1 )
-star_score_thresholds = [ 15000, 45000, 65000 ]
-crops = [ "Corn", "Potato", "Corn", "Potato", "Corn", "Potato", "Corn", "Potato", "Pumpkin" ]
-counts = [ 4, 5, 4, 4, 4, 4, 4, 4, 16 ]
+star_score_thresholds = [ 15000, 45000, 60000 ]
+crops = [ "Corn", "Pumpkin", "Corn", "Potato", "Pumpkin", "Potato" ]
+counts = [ 4, 6, 12, 6, 6, 10 ]
