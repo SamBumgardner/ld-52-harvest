@@ -25,7 +25,7 @@ func _on_level_ended(score, star_thresholds, high_score, level_index):
 		if score > high_score:
 			next_star_label.text = "New High Score!\n" + str(score)
 		else:
-			high_score.text = "High Score:\n" + str(high_score)
+			next_star_label.text = "High Score:\n" + str(high_score)
 	
 	emit_signal("score_tally_complete", score, total_stars, level_index)
 	

@@ -33,7 +33,7 @@ func _ready():
 	$Sprite.texture = tile_textures[tile_growth_mode]
 	match tile_growth_mode:
 		GROWTH_MODE.FAST:
-			growth_duration_multiplier = .5
+			growth_duration_multiplier = .25
 		GROWTH_MODE.SLOW:
 			growth_duration_multiplier = 2
 
@@ -73,7 +73,8 @@ func _plant():
 		emit_signal("tile_planted", crop)
 		$SFX_Plant.play()
 		_grow()
-		$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1])
+		$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1] \
+			* (growth_duration_multiplier if growth_stage != 4 else max(growth_duration_multiplier, 1)))
 
 func _harvest():
 	if growing && growth_stage in HARVESTABLE_GROWTH_STAGES:
@@ -94,7 +95,8 @@ func _grow():
 	if growth_stage == 3:
 		$Sprite.frame += CROP_DATA.crops[crop].sprite_index_offset
 	$Sprite.frame += 1 
-	$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1] * growth_duration_multiplier)
+	$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1] \
+		* (growth_duration_multiplier if growth_stage != 4 else max(growth_duration_multiplier, 1)))
 
 func _die():
 	_remove_plant()

@@ -1,6 +1,6 @@
 extends Node
 
-export var TOTAL_LEVEL_COUNT = 6
+export var TOTAL_LEVEL_COUNT = 13
 var level_scores = []
 
 func _ready():
