@@ -46,7 +46,7 @@ grow_vertical = 0
 alignment = 1
 
 [node name="Title" type="Label" parent="TitleContentContainer"]
-margin_right = 337.0
+margin_right = 367.0
 margin_bottom = 173.0
 custom_fonts/font = SubResource( 1 )
 text = "Farming
@@ -55,34 +55,34 @@ align = 1
 
 [node name="SubTitle" type="Label" parent="TitleContentContainer"]
 margin_top = 177.0
-margin_right = 337.0
-margin_bottom = 218.0
+margin_right = 367.0
+margin_bottom = 244.0
 custom_fonts/font = SubResource( 2 )
 text = "Ludum Dare 52 Game Jam Entry
 by Sam and Noah Bumgardner"
 align = 1
 
 [node name="ButtonsContainer" type="VBoxContainer" parent="TitleContentContainer"]
-margin_top = 222.0
-margin_right = 337.0
-margin_bottom = 305.0
+margin_top = 248.0
+margin_right = 367.0
+margin_bottom = 331.0
 
 [node name="StartButton" type="Button" parent="TitleContentContainer/ButtonsContainer"]
-margin_right = 337.0
+margin_right = 367.0
 margin_bottom = 25.0
 custom_fonts/font = SubResource( 3 )
 text = "Start"
 
 [node name="CreditsButton" type="Button" parent="TitleContentContainer/ButtonsContainer"]
 margin_top = 29.0
-margin_right = 337.0
+margin_right = 367.0
 margin_bottom = 54.0
 custom_fonts/font = SubResource( 3 )
 text = "Credits"
 
 [node name="QuitButton" type="Button" parent="TitleContentContainer/ButtonsContainer"]
 margin_top = 58.0
-margin_right = 337.0
+margin_right = 367.0
 margin_bottom = 83.0
 custom_fonts/font = SubResource( 4 )
 text = "Quit"
