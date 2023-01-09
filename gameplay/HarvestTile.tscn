@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://art/harvest_tile.png" type="Texture" id=1]
 [ext_resource path="res://gameplay/HarvestTile.gd" type="Script" id=2]
+[ext_resource path="res://audio/ld-52-plant_v1.wav" type="AudioStream" id=3]
+[ext_resource path="res://audio/ld-52-harvest_v1.wav" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.0
@@ -19,6 +21,12 @@ process_mode = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="SFX_Plant" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="SFX_Harvest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_HarvestTile_mouse_exited"]

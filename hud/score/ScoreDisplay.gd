@@ -8,6 +8,7 @@ signal final_score
 
 const RIPE_GROWTH_STAGE = 4
 const MAX_MULTIPLIER = 8
+const MIN_MULTIPLIER = 1
 const DIFFICULT_MULTIPLIER_START = 5
 const COMBO_GROWTH_THRESHOLDS = [0.0, 50.0, 150.0, 450.0, 1000.0, 1600.0, 2200.0, 2800.0]
 const COMBO_TIMER_DURATIONS = [10, 10, 10, 10, 8, 6, 4, 4]
@@ -72,6 +73,7 @@ func _check_combo_growth():
 func _upgrade_multiplier():
 	combo_growth_current -= COMBO_GROWTH_THRESHOLDS[multiplier]
 	multiplier += 1
+	_play_sfx_increment_combo(multiplier)
 	emit_signal("multiplier_changed", multiplier)
 
 func _update_combo_threshold():
@@ -110,3 +112,23 @@ func _process(_delta):
 
 func _update_combo_timer_display():
 	combo_timer_display.value = combo_timer.time_left / combo_timer.wait_time * 100
+
+func _play_sfx_increment_combo(multiplier):
+	if multiplier < MIN_MULTIPLIER + 1 or multiplier > MAX_MULTIPLIER:
+		return
+	elif multiplier == 2:
+		$SFX_IncrementComboTo2.play()
+	elif multiplier == 3:
+		$SFX_IncrementComboTo3.play()
+	elif multiplier == 4:
+		$SFX_IncrementComboTo4.play()
+	elif multiplier == 5:
+		$SFX_IncrementComboTo5.play()
+	elif multiplier == 6:
+		$SFX_IncrementComboTo6.play()
+	elif multiplier == 7:
+		$SFX_IncrementComboTo7.play()
+	elif multiplier == 8:
+		$SFX_IncrementComboTo8.play()
+	else:
+		return
