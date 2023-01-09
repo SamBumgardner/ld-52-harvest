@@ -2,15 +2,20 @@
 
 [ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/Roboto/Roboto-Light.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://art/start_menu_background.png" type="Texture" id=3]
-[ext_resource path="res://audio/ld-52-title_v1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://art/farm_background_faded.png" type="Texture" id=3]
+[ext_resource path="res://art/ld-52-title_v1.ogg" type="AudioStream" id=4]
 [ext_resource path="res://menus/StartMenu.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 26
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -27,10 +32,9 @@ script = ExtResource( 5 )
 [node name="Background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 1600.0
-margin_bottom = 600.0
 texture = ExtResource( 3 )
 expand = true
+stretch_mode = 1
 
 [node name="TitleContentContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.33
