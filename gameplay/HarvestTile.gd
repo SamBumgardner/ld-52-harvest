@@ -79,7 +79,12 @@ func _plant():
 func _harvest():
 	if growing && growth_stage in HARVESTABLE_GROWTH_STAGES:
 		emit_signal("tile_harvested", crop, growth_stage, CROP_DATA.crops[crop].scores[growth_stage - 1])
-		$SFX_Harvest.play()
+		
+		if growth_stage == 4:
+			$SFX_Harvest.play()
+			$HarvestParticleRipe.emitting = true
+		else:
+			$SFX_Harvest2.play()
 		_remove_plant()
 
 func _on_Growth_timeout():
@@ -95,6 +100,8 @@ func _grow():
 	if growth_stage == 3:
 		$Sprite.frame += CROP_DATA.crops[crop].sprite_index_offset
 	$Sprite.frame += 1 
+	if growth_stage == 4:
+		$GrowthParticleRipe.emitting = true
 	$Growth.start(CROP_DATA.crops[crop].growth_times[growth_stage - 1] \
 		* (growth_duration_multiplier if growth_stage != 4 else max(growth_duration_multiplier, 1)))
 
