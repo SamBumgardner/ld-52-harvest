@@ -6,7 +6,7 @@
 [ext_resource path="res://audio/ld-52-harvest_v1.wav" type="AudioStream" id=4]
 [ext_resource path="res://art/ready_for_harvest_particle.png" type="Texture" id=5]
 [ext_resource path="res://art/good_harvest_particle.png" type="Texture" id=6]
-[ext_resource path="res://audio/basic_harvest.wav" type="AudioStream" id=7]
+[ext_resource path="res://audio/basic-harvest.wav" type="AudioStream" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.0
