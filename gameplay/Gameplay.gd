@@ -20,7 +20,7 @@ var mode = MOUSE_MODE.HARVEST
 
 @export var level_number = 0
 @export var level_name = ""
-var level_ended = false
+var level_ended_detected_flag = false
 
 func _ready():
 	LevelName.text = level_name
@@ -79,13 +79,13 @@ func _check_harvest_mode_toggle():
 		emit_signal("harvest_mode_change", mode)
 
 func _check_level_ended():
-	if plant_queue_display.get_current_crop().is_empty() && !level_ended:
+	if plant_queue_display.get_current_crop().is_empty() && !level_ended_detected_flag:
 		var no_active_plants = true
 		for child in $Field.get_children():
 			no_active_plants = no_active_plants and (child as HarvestTile).is_empty()
 		
 		if no_active_plants:
-			level_ended = true
+			level_ended_detected_flag = true
 			$BackgroundMusic.stop()
 			emit_signal("level_ended", score_display.score, plant_queue.star_score_thresholds, 
 				HighScoreMemory.level_scores[level_number].high_score, level_number)
