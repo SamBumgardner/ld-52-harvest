@@ -4,7 +4,6 @@ class_name ScoreDisplay
 
 signal multiplier_changed
 signal crop_chain_changed
-signal final_score
 
 const RIPE_GROWTH_STAGE = 4
 const MAX_MULTIPLIER = 8
