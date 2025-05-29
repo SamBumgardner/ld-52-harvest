@@ -23,7 +23,8 @@ var mode = MOUSE_MODE.HARVEST
 var level_ended_detected_flag = false
 
 func _ready():
-	LevelName.text = level_name
+	if LevelName:
+		LevelName.text = level_name
 	
 	plant_queue_display.parent_ready()
 	
@@ -41,12 +42,16 @@ func _ready():
 		plant_queue_display.connect("crop_change", Callable(child, "_on_crop_change"))
 		(child as HarvestTile).planting_crop_type = plant_queue_display.get_current_crop()
 	
-	$BackgroundMusic.play()
+	if $BackgroundMusic:
+		$BackgroundMusic.play()
 	
 	_set_up_hacky_plant_queue()
 	_web_cursor_workaround()
 
 func _set_up_hacky_plant_queue():
+	if not $HackyPlantQueue:
+		return
+	
 	var hackyQueueBadges = $HackyPlantQueue.get_children()
 	for i in hackyQueueBadges.size():
 		if i < plant_queue.crops.size():
@@ -56,6 +61,9 @@ func _set_up_hacky_plant_queue():
 			hackyQueueBadges[i].visible = false
 
 func _web_cursor_workaround():
+	if not harvest_mode_symbol:
+		return
+	
 	if (OS.get_name() == "HTML5"):
 		harvest_mode_symbol.visible = true
 		harvest_mode_symbol.frame = mode
@@ -75,7 +83,10 @@ func _check_harvest_mode_toggle():
 		else:
 			mode = MOUSE_MODE.PLANT
 			Input.set_custom_mouse_cursor(plant_cursor, 0, Vector2(32, 0))
-		harvest_mode_symbol.frame = mode
+		
+		if harvest_mode_symbol:
+			harvest_mode_symbol.frame = mode
+		
 		emit_signal("harvest_mode_change", mode)
 
 func _check_level_ended():
