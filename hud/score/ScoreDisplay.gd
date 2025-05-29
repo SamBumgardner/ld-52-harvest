@@ -27,13 +27,13 @@ var combo_growth_current = 0
 var multiplier = 1
 var plants_since_last_harvest = 0
 
-onready var chain_text = $ChainText as Label
-onready var multiplier_text = $MultiplierText as Label
-onready var score_text = $ScoreText as Label
-onready var grace_timer = $GraceTimer as Timer
-onready var combo_timer = $ComboTimer as Timer
-onready var combo_timer_display = $ComboTimerDisplay as ProgressBar
-onready var combo_growth = $ComboGrowth as ProgressBar
+@onready var chain_text = $ChainText as Label
+@onready var multiplier_text = $MultiplierText as Label
+@onready var score_text = $ScoreText as Label
+@onready var grace_timer = $GraceTimer as Timer
+@onready var combo_timer = $ComboTimer as Timer
+@onready var combo_timer_display = $ComboTimerDisplay as ProgressBar
+@onready var combo_growth = $ComboGrowth as ProgressBar
 
 func _on_tile_planted(_crop_type):
 	if (plants_since_last_harvest < MAX_PLANT_GRACE_COUNT - multiplier):

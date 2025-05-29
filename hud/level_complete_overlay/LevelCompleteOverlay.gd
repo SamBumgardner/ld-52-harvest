@@ -2,12 +2,12 @@ extends Popup
 
 signal score_tally_complete
 
-onready var score_label = $Panel/Score as Label
-onready var star_progress = $Panel/StarProgress as TextureProgress
-onready var next_star_label = $Panel/NextStar as Label
+@onready var score_label = $Panel/Score as Label
+@onready var star_progress = $Panel/StarProgress as TextureProgressBar
+@onready var next_star_label = $Panel/NextStar as Label
 
 func _on_LevelSelectButton_pressed():
-	get_tree().change_scene("res://menus/LevelSelect.tscn")
+	get_tree().change_scene_to_file("res://menus/LevelSelect.tscn")
 
 func _on_level_ended(score, star_thresholds, high_score, level_index):
 	score_label.text = "Score:\n" + str(score)

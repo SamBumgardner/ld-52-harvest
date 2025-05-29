@@ -5,21 +5,21 @@ class_name Gameplay
 signal harvest_mode_change
 signal level_ended
 
-export var plant_queue:Resource = preload("res://data/plant_queues/levels/placeholder.tres")
+@export var plant_queue:Resource = preload("res://data/plant_queues/levels/placeholder.tres")
 var harvest_cursor = preload("res://art/scythe.png")
 var plant_cursor = preload("res://art/seed_satchel.png")
 
 enum MOUSE_MODE {PLANT, HARVEST}
 var mode = MOUSE_MODE.HARVEST
 
-onready var score_display = $ScoreDisplay as ScoreDisplay
-onready var plant_queue_display = $PlantQueueDisplay as PlantQueueDisplay
-onready var level_complete_overlay = $LevelCompleteOverlay
-onready var LevelName = $LevelName as Label
-onready var harvest_mode_symbol = $HarvestModeWebWorkaround as Sprite
+@onready var score_display = $ScoreDisplay as ScoreDisplay
+@onready var plant_queue_display = $PlantQueueDisplay as PlantQueueDisplay
+@onready var level_complete_overlay = $LevelCompleteOverlay
+@onready var LevelName = $LevelName as Label
+@onready var harvest_mode_symbol = $HarvestModeWebWorkaround as Sprite2D
 
-export var level_number = 0
-export var level_name = ""
+@export var level_number = 0
+@export var level_name = ""
 var level_ended = false
 
 func _ready():
@@ -29,16 +29,16 @@ func _ready():
 	
 	Input.set_custom_mouse_cursor(harvest_cursor, 0, Vector2(32, 0))
 	
-	connect("level_ended", level_complete_overlay, "_on_level_ended")
-	level_complete_overlay.connect("score_tally_complete", HighScoreMemory, "_on_score_tally_complete")
+	connect("level_ended", Callable(level_complete_overlay, "_on_level_ended"))
+	level_complete_overlay.connect("score_tally_complete", Callable(HighScoreMemory, "_on_score_tally_complete"))
 	
 	for child in $Field.get_children():
-		connect("harvest_mode_change", child, "_on_harvest_mode_change")
+		connect("harvest_mode_change", Callable(child, "_on_harvest_mode_change"))
 		
 		(child as HarvestTile).connect_all_tile_events(score_display)
-		(child as HarvestTile).connect("tile_planted", plant_queue_display, "_on_tile_planted")
+		(child as HarvestTile).connect("tile_planted", Callable(plant_queue_display, "_on_tile_planted"))
 		
-		plant_queue_display.connect("crop_change", child, "_on_crop_change")
+		plant_queue_display.connect("crop_change", Callable(child, "_on_crop_change"))
 		(child as HarvestTile).planting_crop_type = plant_queue_display.get_current_crop()
 	
 	$BackgroundMusic.play()
@@ -79,10 +79,10 @@ func _check_harvest_mode_toggle():
 		emit_signal("harvest_mode_change", mode)
 
 func _check_level_ended():
-	if plant_queue_display.get_current_crop().empty() && !level_ended:
+	if plant_queue_display.get_current_crop().is_empty() && !level_ended:
 		var no_active_plants = true
 		for child in $Field.get_children():
-			no_active_plants = no_active_plants and (child as HarvestTile).empty()
+			no_active_plants = no_active_plants and (child as HarvestTile).is_empty()
 		
 		if no_active_plants:
 			level_ended = true

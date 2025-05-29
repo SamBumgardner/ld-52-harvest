@@ -67,7 +67,7 @@ position = Vector2( 32, 400 )
 [node name="PlantQueueDisplay" parent="." instance=ExtResource( 4 )]
 
 [node name="LevelCompleteOverlay" parent="." instance=ExtResource( 5 )]
-margin_left = 200.0
-margin_top = 100.0
-margin_right = -200.0
-margin_bottom = -100.0
+offset_left = 200.0
+offset_top = 100.0
+offset_right = -200.0
+offset_bottom = -100.0

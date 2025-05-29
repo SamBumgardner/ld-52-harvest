@@ -1,8 +1,8 @@
-extends Sprite
+extends Sprite2D
 
 class_name CropBadge
 
-onready var countLabel = $Count as Label
+@onready var countLabel = $Count as Label
 
 func set_sprite_offset(offset):
 	frame = offset
