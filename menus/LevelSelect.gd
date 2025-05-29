@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	Input.set_custom_mouse_cursor(null, CURSOR_ARROW)
+	Input.set_custom_mouse_cursor(null, Input.CURSOR_ARROW)
 	$ButtonsContainer/LevelButton00.grab_focus()
 	for button in $ButtonsContainer.get_children():
 		var level_suffix = str(button.level_index) if button.level_index > 9 else "0" + str(button.level_index)
