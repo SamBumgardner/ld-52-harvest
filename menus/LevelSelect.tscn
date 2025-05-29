@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://fonts/Roboto/Roboto-Bold.ttf" type="FontFile" id=1]
-[ext_resource path="res://fonts/Roboto/Roboto-Light3D.ttf" type="FontFile" id=2]
+[ext_resource path="res://fonts/Roboto/Roboto-Light.ttf" type="FontFile" id=2]
 [ext_resource path="res://menus/LevelSelect.gd" type="Script" id=3]
 [ext_resource path="res://art/farm_background_faded.png" type="Texture2D" id=4]
 [ext_resource path="res://audio/ld-52-level-select_v1.ogg" type="AudioStream" id=5]
