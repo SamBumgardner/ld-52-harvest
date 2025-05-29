@@ -1,4 +1,3 @@
-; Project was converted by built-in tool to Godot 4
 ; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
@@ -9,62 +8,11 @@
 
 config_version=5
 
-_global_script_classes=[ {
-"base": "Sprite",
-"class": "CropBadge",
-"language": "GDScript",
-"path": "res://hud/plant_queue/CropBadge.gd"
-}, {
-"base": "Resource",
-"class": "CropData",
-"language": "GDScript",
-"path": "res://data/crops/crop_data.gd"
-}, {
-"base": "Resource",
-"class": "CropsData",
-"language": "GDScript",
-"path": "res://data/crops/crops_data.gd"
-}, {
-"base": "Node",
-"class": "Gameplay",
-"language": "GDScript",
-"path": "res://gameplay/Gameplay.gd"
-}, {
-"base": "Area2D",
-"class": "HarvestTile",
-"language": "GDScript",
-"path": "res://gameplay/HarvestTile.gd"
-}, {
-"base": "Resource",
-"class": "PlantQueue",
-"language": "GDScript",
-"path": "res://data/plant_queues/plant_queue.gd"
-}, {
-"base": "Node2D",
-"class": "PlantQueueDisplay",
-"language": "GDScript",
-"path": "res://hud/plant_queue/PlantQueueDisplay.gd"
-}, {
-"base": "Node2D",
-"class": "ScoreDisplay",
-"language": "GDScript",
-"path": "res://hud/score/ScoreDisplay.gd"
-} ]
-_global_script_class_icons={
-"CropBadge": "",
-"CropData": "",
-"CropsData": "",
-"Gameplay": "",
-"HarvestTile": "",
-"PlantQueue": "",
-"PlantQueueDisplay": "",
-"ScoreDisplay": ""
-}
-
 [application]
 
 config/name="ld-52-harvest"
 run/main_scene="res://menus/StartMenu.tscn"
+config/features=PackedStringArray("4.4")
 config/icon="res://art/scythe.png"
 <<<<<<<HEADrun/main_scene="res://GameplayTest.tscn"
 
@@ -88,13 +36,13 @@ common/drop_mouse_on_gui_input_disabled=true
 
 harvest_mode_toggle={
 "deadzone": 0.5,
-"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"command":false,"pressed":false,"keycode":90,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
-, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
-, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"double_click":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"command":false,"pressed":false,"keycode":4194310,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"command":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"command":false,"pressed":false,"keycode":32,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
- ]
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":90,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194310,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
 }
 
 [physics]
@@ -103,7 +51,6 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+environment/defaults/default_environment="res://default_env.tres"
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
-textures/vram_compression/import_etc2_astc=false
-environment/defaults/default_environment="res://default_env.tres"
