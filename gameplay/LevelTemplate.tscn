@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6umn46akba4x"]
+[gd_scene load_steps=11 format=3 uid="uid://1cnbivwynr1m"]
 
 [ext_resource type="PackedScene" path="res://hud/level_complete_overlay/LevelCompleteOverlay.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://hud/plant_queue/PlantQueueDisplay.tscn" id="2"]
