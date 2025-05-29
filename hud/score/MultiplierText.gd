@@ -1,7 +1,7 @@
 extends Label
 
 const MULTIPLIER_COLORS = [Color.WHITE, Color.ALICE_BLUE, Color.AQUAMARINE, Color.AQUA, 
-	Color.cornflower, Color.PLUM, Color.DARK_ORCHID, Color.RED]
+	Color.CORNFLOWER_BLUE, Color.PLUM, Color.DARK_ORCHID, Color.RED]
 
 var current_multiplier = 1
 

@@ -1,7 +1,7 @@
 extends Label
 
 const CROP_CHAIN_COLORS = [Color.WHITE, Color.ALICE_BLUE, Color.AQUAMARINE, Color.AQUA, 
-	Color.cornflower, Color.DARK_ORCHID, Color.RED]
+	Color.CORNFLOWER_BLUE, Color.DARK_ORCHID, Color.RED]
 
 func _on_ScoreDisplay_crop_chain_changed(crop_chain, crop_chain_type):
 	if crop_chain == 0:
