@@ -38,12 +38,14 @@ offset_top = 152.0
 offset_right = 152.0
 offset_bottom = 184.0
 rotation = 4.71239
+show_percentage = false
 
 [node name="ComboTimerDisplay" type="ProgressBar" parent="."]
 offset_left = 32.0
 offset_top = 112.0
 offset_right = 216.0
 offset_bottom = 152.0
+show_percentage = false
 
 [node name="ComboTimer" type="Timer" parent="."]
 one_shot = true
