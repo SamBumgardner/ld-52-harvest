@@ -112,22 +112,22 @@ func _process(_delta):
 func _update_combo_timer_display():
 	combo_timer_display.value = combo_timer.time_left / combo_timer.wait_time * 100
 
-func _play_sfx_increment_combo(multiplier):
-	if multiplier < MIN_MULTIPLIER + 1 or multiplier > MAX_MULTIPLIER:
+func _play_sfx_increment_combo(multiplier_at_time_of_trigger):
+	if (multiplier_at_time_of_trigger < MIN_MULTIPLIER + 1 or multiplier_at_time_of_trigger > MAX_MULTIPLIER):
 		return
-	elif multiplier == 2:
+	elif multiplier_at_time_of_trigger == 2:
 		$SFX_IncrementComboTo2.play()
-	elif multiplier == 3:
+	elif multiplier_at_time_of_trigger == 3:
 		$SFX_IncrementComboTo3.play()
-	elif multiplier == 4:
+	elif multiplier_at_time_of_trigger == 4:
 		$SFX_IncrementComboTo4.play()
-	elif multiplier == 5:
+	elif multiplier_at_time_of_trigger == 5:
 		$SFX_IncrementComboTo5.play()
-	elif multiplier == 6:
+	elif multiplier_at_time_of_trigger == 6:
 		$SFX_IncrementComboTo6.play()
-	elif multiplier == 7:
+	elif multiplier_at_time_of_trigger == 7:
 		$SFX_IncrementComboTo7.play()
-	elif multiplier == 8:
+	elif multiplier_at_time_of_trigger == 8:
 		$SFX_IncrementComboTo8.play()
 	else:
 		return
