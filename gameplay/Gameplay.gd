@@ -25,6 +25,8 @@ var level_ended_detected_flag = false
 func _ready():
 	if LevelName:
 		LevelName.text = level_name
+	else:
+		push_warning("Level name label node not found.")
 	
 	plant_queue_display.parent_ready()
 	
@@ -44,12 +46,15 @@ func _ready():
 	
 	if $BackgroundMusic:
 		$BackgroundMusic.play()
+	else:
+		push_warning("Level background music node not found.")
 	
 	_set_up_hacky_plant_queue()
 	_web_cursor_workaround()
 
 func _set_up_hacky_plant_queue():
 	if not $HackyPlantQueue:
+		push_warning("Level hacky plant queue node not found.")
 		return
 	
 	var hackyQueueBadges = $HackyPlantQueue.get_children()
@@ -62,6 +67,7 @@ func _set_up_hacky_plant_queue():
 
 func _web_cursor_workaround():
 	if not harvest_mode_symbol:
+		push_warning("Level harvest mode web workaround node not found.")
 		return
 	
 	if (OS.get_name() == "HTML5"):
