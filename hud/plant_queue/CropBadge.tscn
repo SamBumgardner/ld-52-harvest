@@ -1,19 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://dhto0eh625puj"]
 
-[ext_resource path="res://art/crop_badges_atlas.tres" type="Texture2D" id=1]
-[ext_resource path="res://fonts/Roboto/Roboto-Black.ttf" type="FontFile" id=2]
-[ext_resource path="res://hud/plant_queue/CropBadge.gd" type="Script" id=3]
+[ext_resource type="Texture2D" path="res://art/crop_badges_atlas.tres" id="1"]
+[ext_resource type="FontFile" uid="uid://bq0ruc12ux7wn" path="res://fonts/Roboto/Roboto-Black.ttf" id="2"]
+[ext_resource type="Script" uid="uid://bkjv7et7wvfa0" path="res://hud/plant_queue/CropBadge.gd" id="3"]
 
-[sub_resource type="FontFile" id=1]
-size = 48
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="CropBadge" type="Sprite2D"]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 hframes = 3
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="Count" type="Label" parent="."]
 offset_left = 32.0
@@ -21,5 +23,5 @@ offset_top = 8.0
 offset_right = 60.0
 offset_bottom = 65.0
 grow_horizontal = 0
-theme_override_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource("1")
 text = "0"

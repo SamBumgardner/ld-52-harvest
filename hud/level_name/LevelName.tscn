@@ -1,15 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://ctxr7532f751r"]
 
-[ext_resource path="res://fonts/Roboto/Roboto-BlackItalic.ttf" type="FontFile" id=1]
-[ext_resource path="res://hud/level_name/LevelName.gd" type="Script" id=2]
+[ext_resource type="FontFile" uid="uid://d2vxat111wdt1" path="res://fonts/Roboto/Roboto-BlackItalic.ttf" id="1"]
+[ext_resource type="Script" uid="uid://bqxuju2sibcdx" path="res://hud/level_name/LevelName.gd" id="2"]
 
-[sub_resource type="FontFile" id=1]
-size = 72
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("1")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="LevelName" type="Label"]
+anchors_preset = -1
 anchor_top = 0.1
 anchor_right = 1.0
 anchor_bottom = 0.1
@@ -17,10 +20,10 @@ offset_top = -35.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = SubResource( 1 )
+theme_override_fonts/font = SubResource("1")
 text = "Test Name"
-align = 1
-script = ExtResource( 2 )
+horizontal_alignment = 1
+script = ExtResource("2")
 
 [node name="FadeAwayTimer" type="Timer" parent="."]
 

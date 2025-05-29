@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" path="res://gameplay/HarvestTile.tscn" id="1"]
 [ext_resource type="Script" uid="uid://dp0mlic2g8rvv" path="res://gameplay/Gameplay.gd" id="2"]
-[ext_resource type="PackedScene" uid="uid://d1br2wwy4lmcx" path="res://hud/score/ScoreDisplay.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://hud/plant_queue/PlantQueueDisplay.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://hud/level_complete_overlay/LevelCompleteOverlay.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://bh0wo60prvj04" path="res://hud/score/ScoreDisplay.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://dv7ulit2h2prr" path="res://hud/plant_queue/PlantQueueDisplay.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://c4sq53nq1x2m4" path="res://hud/level_complete_overlay/LevelCompleteOverlay.tscn" id="5"]
 [ext_resource type="Resource" path="res://data/plant_queues/levels/gameplay_test_queue.tres" id="6"]
 
 [node name="Main" type="Node"]
