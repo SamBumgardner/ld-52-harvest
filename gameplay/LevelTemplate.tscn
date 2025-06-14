@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://1cnbivwynr1m"]
+[gd_scene load_steps=12 format=3 uid="uid://1cnbivwynr1m"]
 
 [ext_resource type="PackedScene" uid="uid://c4sq53nq1x2m4" path="res://hud/level_complete_overlay/LevelCompleteOverlay.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://dv7ulit2h2prr" path="res://hud/plant_queue/PlantQueueDisplay.tscn" id="2"]
@@ -8,6 +8,7 @@
 [ext_resource type="TileSet" path="res://art/gameplay_tileset.tres" id="6"]
 [ext_resource type="AudioStream" uid="uid://dwdfrg4vo7heg" path="res://audio/ld-52-gameplay-farmer_v1.ogg" id="7"]
 [ext_resource type="PackedScene" uid="uid://ctxr7532f751r" path="res://hud/level_name/LevelName.tscn" id="8"]
+[ext_resource type="Theme" uid="uid://qn5tonktuia0" path="res://themes/title_label_italic_theme.tres" id="8_rof0c"]
 [ext_resource type="PackedScene" uid="uid://dhto0eh625puj" path="res://hud/plant_queue/CropBadge.tscn" id="9"]
 [ext_resource type="Texture2D" uid="uid://c8363psxjaxgr" path="res://art/harvest_icons.png" id="10"]
 
@@ -38,6 +39,7 @@ offset_bottom = 0.0
 stream = ExtResource("7")
 
 [node name="LevelName" parent="." instance=ExtResource("8")]
+theme = ExtResource("8_rof0c")
 
 [node name="HackyPlantQueue" type="Node" parent="."]
 
