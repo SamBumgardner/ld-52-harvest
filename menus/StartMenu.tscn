@@ -1,17 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://blhjwtvsbfcnl"]
+[gd_scene load_steps=8 format=3 uid="uid://blhjwtvsbfcnl"]
 
-[ext_resource type="FontFile" uid="uid://bhilytg8n5xso" path="res://fonts/Roboto/Roboto-Bold.ttf" id="1"]
 [ext_resource type="FontFile" uid="uid://bs58lmk2nmono" path="res://fonts/Roboto/Roboto-Light.ttf" id="2"]
 [ext_resource type="Texture2D" uid="uid://qys6yuqn3d7f" path="res://art/farm_background_faded.png" id="3"]
+[ext_resource type="Theme" uid="uid://cis5ab30diglj" path="res://themes/title_label_theme.tres" id="3_rj5xk"]
 [ext_resource type="Script" uid="uid://bftfiehx5yg6x" path="res://menus/StartMenu.gd" id="5"]
-
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("1")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("2")])
@@ -66,7 +58,7 @@ alignment = 1
 
 [node name="Title" type="Label" parent="TitleContentContainer"]
 layout_mode = 2
-theme_override_fonts/font = SubResource("1")
+theme = ExtResource("3_rj5xk")
 text = "Farming
 Combos"
 horizontal_alignment = 1
