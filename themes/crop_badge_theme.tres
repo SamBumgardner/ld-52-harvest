@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://n6hrery8l6mf"]
+
+[ext_resource type="FontFile" uid="uid://bq0ruc12ux7wn" path="res://fonts/Roboto/Roboto-Black.ttf" id="1_utkrs"]
+
+[resource]
+Label/constants/outline_size = 4
+Label/font_sizes/font_size = 48
+Label/fonts/font = ExtResource("1_utkrs")
