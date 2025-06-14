@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=3 uid="uid://1cnbivwynr1m"]
 
-[ext_resource type="PackedScene" path="res://hud/level_complete_overlay/LevelCompleteOverlay.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://hud/plant_queue/PlantQueueDisplay.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://d1br2wwy4lmcx" path="res://hud/score/ScoreDisplay.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://c4sq53nq1x2m4" path="res://hud/level_complete_overlay/LevelCompleteOverlay.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://dv7ulit2h2prr" path="res://hud/plant_queue/PlantQueueDisplay.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bh0wo60prvj04" path="res://hud/score/ScoreDisplay.tscn" id="3"]
 [ext_resource type="Script" uid="uid://dp0mlic2g8rvv" path="res://gameplay/Gameplay.gd" id="4"]
-[ext_resource type="PackedScene" path="res://menus/BackToLevelSelectButton.tscn" id="5"]
+[ext_resource type="PackedScene" uid="uid://dfgothis0mprm" path="res://menus/BackToLevelSelectButton.tscn" id="5"]
 [ext_resource type="TileSet" path="res://art/gameplay_tileset.tres" id="6"]
 [ext_resource type="AudioStream" uid="uid://dwdfrg4vo7heg" path="res://audio/ld-52-gameplay-farmer_v1.ogg" id="7"]
-[ext_resource type="PackedScene" path="res://hud/level_name/LevelName.tscn" id="8"]
-[ext_resource type="PackedScene" path="res://hud/plant_queue/CropBadge.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://ctxr7532f751r" path="res://hud/level_name/LevelName.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://dhto0eh625puj" path="res://hud/plant_queue/CropBadge.tscn" id="9"]
 [ext_resource type="Texture2D" uid="uid://c8363psxjaxgr" path="res://art/harvest_icons.png" id="10"]
 
 [node name="Main" type="Node"]
@@ -31,19 +31,13 @@ position = Vector2(32, 400)
 [node name="PlantQueueDisplay" parent="." instance=ExtResource("2")]
 
 [node name="BackToLevelSelectButton" parent="." instance=ExtResource("5")]
-layout_mode = 3
-anchors_preset = 15
 offset_left = 0.0
 offset_bottom = 0.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7")
 
 [node name="LevelName" parent="." instance=ExtResource("8")]
-anchors_preset = -1
-horizontal_alignment = 1
 
 [node name="HackyPlantQueue" type="Node" parent="."]
 

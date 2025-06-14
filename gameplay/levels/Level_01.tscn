@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bpdg78ntc8vfv"]
 
 [ext_resource type="Resource" path="res://data/plant_queues/levels/level_01_queue.tres" id="1"]
-[ext_resource type="PackedScene" path="res://gameplay/HarvestTile.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://gt3q3xswv7cx" path="res://gameplay/HarvestTile.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://1cnbivwynr1m" path="res://gameplay/LevelTemplate.tscn" id="3"]
 
 [node name="Main" instance=ExtResource("3")]
