@@ -1,8 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://bh0wo60prvj04"]
+[gd_scene load_steps=15 format=3 uid="uid://bh0wo60prvj04"]
 
 [ext_resource type="Script" uid="uid://7vl74gk8lwc6" path="res://hud/score/ScoreDisplay.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://bq0ruc12ux7wn" path="res://fonts/Roboto/Roboto-Black.ttf" id="2"]
 [ext_resource type="FontFile" uid="uid://b8r8wfap1fxxq" path="res://fonts/Roboto/Roboto-BoldItalic.ttf" id="3"]
+[ext_resource type="Theme" uid="uid://dalibwjkf0nsp" path="res://themes/gameplay_score_display_score_text_theme.tres" id="3_bff4m"]
 [ext_resource type="Theme" uid="uid://qn5tonktuia0" path="res://themes/title_label_italic_theme.tres" id="3_e7165"]
 [ext_resource type="Script" uid="uid://cax4ab2ts60ay" path="res://hud/score/ChainText.gd" id="4"]
 [ext_resource type="Script" uid="uid://bb81sw30dcjh6" path="res://hud/score/MultiplierText.gd" id="5"]
@@ -13,17 +13,6 @@
 [ext_resource type="AudioStream" uid="uid://dk1rwb1cy0jny" path="res://audio/climb-combo/ld-52-climb-combo_5-of-7_v1.wav" id="10"]
 [ext_resource type="AudioStream" uid="uid://3ghkl30jjxo6" path="res://audio/climb-combo/ld-52-climb-combo_6-of-7_v1.wav" id="11"]
 [ext_resource type="AudioStream" uid="uid://3fxuqqbacpno" path="res://audio/climb-combo/ld-52-climb-combo_7-of-7_v1.wav" id="12"]
-
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("2")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
 
 [sub_resource type="FontFile" id="2"]
 fallbacks = Array[Font]([ExtResource("3")])
@@ -69,7 +58,7 @@ offset_left = 16.0
 offset_top = 152.0
 offset_right = 176.0
 offset_bottom = 192.0
-theme_override_fonts/font = SubResource("1")
+theme = ExtResource("3_bff4m")
 text = "0"
 
 [node name="MultiplierText" type="Label" parent="."]
