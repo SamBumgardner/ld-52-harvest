@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dm6vt7mn1qhxu"]
+[gd_scene load_steps=7 format=3 uid="uid://dm6vt7mn1qhxu"]
 
 [ext_resource type="PackedScene" uid="uid://wqpq76xfy3qq" path="res://menus/BackToStartMenuButton.tscn" id="1"]
+[ext_resource type="Theme" uid="uid://bkystkntu2chc" path="res://themes/credits_menu_theme.tres" id="1_n3cni"]
 [ext_resource type="FontFile" uid="uid://bs58lmk2nmono" path="res://fonts/Roboto/Roboto-Light.ttf" id="2"]
 [ext_resource type="Texture2D" uid="uid://cjt3c8mqypr6" path="res://art/start_menu_background.png" id="3"]
 [ext_resource type="Script" uid="uid://bms1750oaxdb7" path="res://menus/CreditsMenu.gd" id="4"]
@@ -60,6 +61,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_n3cni")
 script = ExtResource("4")
 
 [node name="Background" type="TextureRect" parent="."]
