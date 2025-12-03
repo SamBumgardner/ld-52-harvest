@@ -116,6 +116,7 @@ position = Vector2(984, 176)
 scale = Vector2(0.5, 0.5)
 
 [node name="LevelCompleteOverlay" parent="." instance=ExtResource("1")]
+oversampling_override = 1.0
 
 [node name="HarvestModeWebWorkaround" type="Sprite2D" parent="."]
 position = Vector2(208, 72)
