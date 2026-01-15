@@ -1,12 +1,23 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://art/harvest_tile.png" type="Texture" id=1]
 [ext_resource path="res://gameplay/HarvestTile.gd" type="Script" id=2]
 [ext_resource path="res://audio/ld-52-plant_v1.wav" type="AudioStream" id=3]
 [ext_resource path="res://audio/ld-52-harvest_v1.wav" type="AudioStream" id=4]
+[ext_resource path="res://art/ready_for_harvest_particle.png" type="Texture" id=5]
+[ext_resource path="res://art/good_harvest_particle.png" type="Texture" id=6]
+[ext_resource path="res://audio/basic-harvest.wav" type="AudioStream" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 32.0
+
+[sub_resource type="Curve" id=2]
+min_value = -200.0
+max_value = 200.0
+_data = [ Vector2( 0, -0.909088 ), 0.0, 0.0, 0, 0, Vector2( 0.495049, -102.273 ), 0.0, 0.0, 0, 0, Vector2( 0.752475, -175 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0.00495049, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.49505, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.990099, 0.00568175 ), 0.0, 0.0, 0, 0 ]
 
 [node name="HarvestTile" type="Area2D"]
 script = ExtResource( 2 )
@@ -27,6 +38,44 @@ stream = ExtResource( 3 )
 
 [node name="SFX_Harvest" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[node name="SFX_Harvest2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="GrowthParticleRipe" type="CPUParticles2D" parent="."]
+position = Vector2( 0, 16 )
+scale = Vector2( 0.5, 0.5 )
+emitting = false
+amount = 4
+one_shot = true
+explosiveness = 1.0
+randomness = 0.5
+texture = ExtResource( 5 )
+direction = Vector2( 0, -1 )
+gravity = Vector2( 0, 200 )
+initial_velocity = 150.0
+initial_velocity_random = 0.75
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+linear_accel_curve = SubResource( 2 )
+scale_amount_curve = SubResource( 3 )
+
+[node name="HarvestParticleRipe" type="CPUParticles2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+emitting = false
+one_shot = true
+explosiveness = 1.0
+randomness = 0.5
+texture = ExtResource( 6 )
+direction = Vector2( 0, 0 )
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 150.0
+initial_velocity_random = 0.75
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+linear_accel_curve = SubResource( 2 )
+scale_amount_curve = SubResource( 3 )
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_HarvestTile_mouse_exited"]
