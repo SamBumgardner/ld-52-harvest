@@ -1,20 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctxr7532f751r"]
+[gd_scene format=3 uid="uid://ctxr7532f751r"]
 
-[ext_resource type="FontFile" uid="uid://d2vxat111wdt1" path="res://fonts/Roboto/Roboto-BlackItalic.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://o0s1h58vvblr" path="res://fonts/Roboto/Roboto-BlackItalic.ttf" id="1"]
 [ext_resource type="Script" uid="uid://bqxuju2sibcdx" path="res://hud/level_name/LevelName.gd" id="2"]
 
 [sub_resource type="FontFile" id="1"]
+resource_name = ""
 fallbacks = Array[Font]([ExtResource("1")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
-[node name="LevelName" type="Label"]
+[node name="LevelName" type="Label" unique_id=656929070]
 anchors_preset = -1
 anchor_top = 0.1
 anchor_right = 1.0
@@ -28,6 +38,6 @@ text = "Test Name"
 horizontal_alignment = 1
 script = ExtResource("2")
 
-[node name="FadeAwayTimer" type="Timer" parent="."]
+[node name="FadeAwayTimer" type="Timer" parent="." unique_id=922555927]
 
 [connection signal="timeout" from="FadeAwayTimer" to="." method="_on_FadeAwayTimer_timeout"]

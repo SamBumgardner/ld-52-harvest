@@ -1,15 +1,25 @@
-[gd_scene load_steps=7 format=3 uid="uid://d223lstwq018w"]
+[gd_scene format=3 uid="uid://d223lstwq018w"]
 
-[ext_resource type="FontFile" uid="uid://bs58lmk2nmono" path="res://fonts/Roboto/Roboto-Light.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://cyupwevlv8ijl" path="res://fonts/Roboto/Roboto-Light.ttf" id="1"]
 [ext_resource type="Script" uid="uid://ut0u6p08tvxd" path="res://menus/LevelButton.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://dlglby6gb2rlu" path="res://art/filled_star.png" id="3"]
-[ext_resource type="FontFile" uid="uid://4t02qt4an57e" path="res://fonts/Roboto/Roboto-Regular.ttf" id="4"]
+[ext_resource type="Texture2D" uid="uid://byyjlo6r8w48l" path="res://art/filled_star.png" id="3"]
+[ext_resource type="FontFile" uid="uid://ckpa7vdlrpio6" path="res://fonts/Roboto/Roboto-Regular.ttf" id="4"]
 
 [sub_resource type="FontFile" id="3"]
+resource_name = ""
 fallbacks = Array[Font]([ExtResource("1")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -17,17 +27,27 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
 [sub_resource type="FontFile" id="4"]
+resource_name = ""
 fallbacks = Array[Font]([ExtResource("4")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
-[node name="LevelButton" type="Button"]
+[node name="LevelButton" type="Button" unique_id=2142977242]
 offset_right = 114.0
 offset_bottom = 40.0
 grow_horizontal = 2
@@ -38,7 +58,7 @@ theme_override_fonts/font = SubResource("3")
 text = "Level X"
 script = ExtResource("2")
 
-[node name="StarsEarned" type="TextureProgressBar" parent="."]
+[node name="StarsEarned" type="TextureProgressBar" parent="." unique_id=71754472]
 layout_mode = 0
 anchor_left = 0.05
 anchor_top = 0.02
@@ -51,7 +71,7 @@ max_value = 3.0
 value = 1.0
 texture_progress = ExtResource("3")
 
-[node name="HighScore" type="Label" parent="."]
+[node name="HighScore" type="Label" parent="." unique_id=1110709936]
 layout_mode = 0
 anchor_right = 1.011
 offset_left = 57.0

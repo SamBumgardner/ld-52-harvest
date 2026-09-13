@@ -1,138 +1,138 @@
-[gd_scene load_steps=4 format=3 uid="uid://ng5huc0fftqp"]
+[gd_scene format=3 uid="uid://ng5huc0fftqp"]
 
 [ext_resource type="PackedScene" uid="uid://1cnbivwynr1m" path="res://gameplay/LevelTemplate.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://gt3q3xswv7cx" path="res://gameplay/HarvestTile.tscn" id="2"]
 [ext_resource type="Resource" path="res://data/plant_queues/levels/level_09_queue.tres" id="3"]
 
-[node name="Main" instance=ExtResource("1")]
+[node name="Main" unique_id=2069696404 instance=ExtResource("1")]
 plant_queue = ExtResource("3")
 level_number = 9
 level_name = "Greenhouse"
 
-[node name="HarvestTile" parent="Field" index="0" instance=ExtResource("2")]
+[node name="HarvestTile" parent="Field" index="0" unique_id=1309870805 instance=ExtResource("2")]
 position = Vector2(480, 224)
 tile_growth_mode = 1
 
-[node name="HarvestTile5" parent="Field" index="1" instance=ExtResource("2")]
+[node name="HarvestTile5" parent="Field" index="1" unique_id=362981448 instance=ExtResource("2")]
 position = Vector2(544, 224)
 tile_growth_mode = 1
 
-[node name="HarvestTile6" parent="Field" index="2" instance=ExtResource("2")]
+[node name="HarvestTile6" parent="Field" index="2" unique_id=740754150 instance=ExtResource("2")]
 position = Vector2(512, 160)
 tile_growth_mode = 1
 
-[node name="HarvestTile2" parent="Field" index="3" instance=ExtResource("2")]
+[node name="HarvestTile2" parent="Field" index="3" unique_id=1396684122 instance=ExtResource("2")]
 position = Vector2(480, 288)
 tile_growth_mode = 1
 
-[node name="HarvestTile7" parent="Field" index="4" instance=ExtResource("2")]
+[node name="HarvestTile7" parent="Field" index="4" unique_id=1932489725 instance=ExtResource("2")]
 position = Vector2(288, 160)
 tile_growth_mode = 2
 
-[node name="HarvestTile8" parent="Field" index="5" instance=ExtResource("2")]
+[node name="HarvestTile8" parent="Field" index="5" unique_id=970732681 instance=ExtResource("2")]
 position = Vector2(288, 224)
 tile_growth_mode = 2
 
-[node name="HarvestTile9" parent="Field" index="6" instance=ExtResource("2")]
+[node name="HarvestTile9" parent="Field" index="6" unique_id=275458993 instance=ExtResource("2")]
 position = Vector2(288, 288)
 tile_growth_mode = 2
 
-[node name="HarvestTile10" parent="Field" index="7" instance=ExtResource("2")]
+[node name="HarvestTile10" parent="Field" index="7" unique_id=97358200 instance=ExtResource("2")]
 position = Vector2(288, 352)
 tile_growth_mode = 2
 
-[node name="HarvestTile11" parent="Field" index="8" instance=ExtResource("2")]
+[node name="HarvestTile11" parent="Field" index="8" unique_id=1113773954 instance=ExtResource("2")]
 position = Vector2(288, 416)
 tile_growth_mode = 2
 
-[node name="HarvestTile12" parent="Field" index="9" instance=ExtResource("2")]
+[node name="HarvestTile12" parent="Field" index="9" unique_id=253687663 instance=ExtResource("2")]
 position = Vector2(352, 160)
 tile_growth_mode = 2
 
-[node name="HarvestTile13" parent="Field" index="10" instance=ExtResource("2")]
+[node name="HarvestTile13" parent="Field" index="10" unique_id=1266069545 instance=ExtResource("2")]
 position = Vector2(352, 224)
 tile_growth_mode = 2
 
-[node name="HarvestTile14" parent="Field" index="11" instance=ExtResource("2")]
+[node name="HarvestTile14" parent="Field" index="11" unique_id=1985369891 instance=ExtResource("2")]
 position = Vector2(352, 288)
 tile_growth_mode = 2
 
-[node name="HarvestTile15" parent="Field" index="12" instance=ExtResource("2")]
+[node name="HarvestTile15" parent="Field" index="12" unique_id=1278128925 instance=ExtResource("2")]
 position = Vector2(352, 352)
 tile_growth_mode = 2
 
-[node name="HarvestTile16" parent="Field" index="13" instance=ExtResource("2")]
+[node name="HarvestTile16" parent="Field" index="13" unique_id=278774766 instance=ExtResource("2")]
 position = Vector2(352, 416)
 tile_growth_mode = 2
 
-[node name="HarvestTile31" parent="Field" index="14" instance=ExtResource("2")]
+[node name="HarvestTile31" parent="Field" index="14" unique_id=687019662 instance=ExtResource("2")]
 position = Vector2(288, 480)
 tile_growth_mode = 2
 
-[node name="HarvestTile32" parent="Field" index="15" instance=ExtResource("2")]
+[node name="HarvestTile32" parent="Field" index="15" unique_id=1259363402 instance=ExtResource("2")]
 position = Vector2(352, 480)
 tile_growth_mode = 2
 
-[node name="HarvestTile17" parent="Field" index="16" instance=ExtResource("2")]
+[node name="HarvestTile17" parent="Field" index="16" unique_id=1256844702 instance=ExtResource("2")]
 position = Vector2(672, 160)
 tile_growth_mode = 2
 
-[node name="HarvestTile18" parent="Field" index="17" instance=ExtResource("2")]
+[node name="HarvestTile18" parent="Field" index="17" unique_id=1386647077 instance=ExtResource("2")]
 position = Vector2(672, 224)
 tile_growth_mode = 2
 
-[node name="HarvestTile19" parent="Field" index="18" instance=ExtResource("2")]
+[node name="HarvestTile19" parent="Field" index="18" unique_id=115741088 instance=ExtResource("2")]
 position = Vector2(672, 288)
 tile_growth_mode = 2
 
-[node name="HarvestTile20" parent="Field" index="19" instance=ExtResource("2")]
+[node name="HarvestTile20" parent="Field" index="19" unique_id=121602332 instance=ExtResource("2")]
 position = Vector2(672, 352)
 tile_growth_mode = 2
 
-[node name="HarvestTile21" parent="Field" index="20" instance=ExtResource("2")]
+[node name="HarvestTile21" parent="Field" index="20" unique_id=356929586 instance=ExtResource("2")]
 position = Vector2(672, 416)
 tile_growth_mode = 2
 
-[node name="HarvestTile27" parent="Field" index="21" instance=ExtResource("2")]
+[node name="HarvestTile27" parent="Field" index="21" unique_id=1062271014 instance=ExtResource("2")]
 position = Vector2(480, 480)
 
-[node name="HarvestTile28" parent="Field" index="22" instance=ExtResource("2")]
+[node name="HarvestTile28" parent="Field" index="22" unique_id=417839343 instance=ExtResource("2")]
 position = Vector2(480, 416)
 
-[node name="HarvestTile29" parent="Field" index="23" instance=ExtResource("2")]
+[node name="HarvestTile29" parent="Field" index="23" unique_id=507652537 instance=ExtResource("2")]
 position = Vector2(544, 416)
 
-[node name="HarvestTile30" parent="Field" index="24" instance=ExtResource("2")]
+[node name="HarvestTile30" parent="Field" index="24" unique_id=348283939 instance=ExtResource("2")]
 position = Vector2(544, 480)
 
-[node name="HarvestTile22" parent="Field" index="25" instance=ExtResource("2")]
+[node name="HarvestTile22" parent="Field" index="25" unique_id=1016561589 instance=ExtResource("2")]
 position = Vector2(736, 160)
 tile_growth_mode = 2
 
-[node name="HarvestTile23" parent="Field" index="26" instance=ExtResource("2")]
+[node name="HarvestTile23" parent="Field" index="26" unique_id=775733157 instance=ExtResource("2")]
 position = Vector2(736, 224)
 tile_growth_mode = 2
 
-[node name="HarvestTile24" parent="Field" index="27" instance=ExtResource("2")]
+[node name="HarvestTile24" parent="Field" index="27" unique_id=842694657 instance=ExtResource("2")]
 position = Vector2(736, 288)
 tile_growth_mode = 2
 
-[node name="HarvestTile25" parent="Field" index="28" instance=ExtResource("2")]
+[node name="HarvestTile25" parent="Field" index="28" unique_id=805520959 instance=ExtResource("2")]
 position = Vector2(736, 352)
 tile_growth_mode = 2
 
-[node name="HarvestTile26" parent="Field" index="29" instance=ExtResource("2")]
+[node name="HarvestTile26" parent="Field" index="29" unique_id=887074750 instance=ExtResource("2")]
 position = Vector2(736, 416)
 tile_growth_mode = 2
 
-[node name="HarvestTile33" parent="Field" index="30" instance=ExtResource("2")]
+[node name="HarvestTile33" parent="Field" index="30" unique_id=914128102 instance=ExtResource("2")]
 position = Vector2(672, 480)
 tile_growth_mode = 2
 
-[node name="HarvestTile34" parent="Field" index="31" instance=ExtResource("2")]
+[node name="HarvestTile34" parent="Field" index="31" unique_id=1452205120 instance=ExtResource("2")]
 position = Vector2(736, 480)
 tile_growth_mode = 2
 
-[node name="HarvestTile3" parent="Field" index="32" instance=ExtResource("2")]
+[node name="HarvestTile3" parent="Field" index="32" unique_id=65344403 instance=ExtResource("2")]
 position = Vector2(544, 288)
 tile_growth_mode = 1

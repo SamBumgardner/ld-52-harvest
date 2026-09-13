@@ -1,30 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://gt3q3xswv7cx"]
+[gd_scene format=3 uid="uid://gt3q3xswv7cx"]
 
-[ext_resource type="Texture2D" uid="uid://bcp8aphdwbr20" path="res://art/harvest_tile.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://b8uklgo5p3bu" path="res://art/harvest_tile.png" id="1"]
 [ext_resource type="Script" uid="uid://bxr0canxx8ccu" path="res://gameplay/HarvestTile.gd" id="2"]
-[ext_resource type="AudioStream" uid="uid://t67dnfjwrbsn" path="res://audio/ld-52-plant_v1.wav" id="3"]
-[ext_resource type="AudioStream" uid="uid://br475qenboklp" path="res://audio/ld-52-harvest_v1.wav" id="4"]
+[ext_resource type="AudioStream" uid="uid://6ah73x4paco8" path="res://audio/ld-52-plant_v1.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://c130y4xw214fd" path="res://audio/ld-52-harvest_v1.wav" id="4"]
 
 [sub_resource type="CircleShape2D" id="1"]
 radius = 32.0
 
-[node name="HarvestTile" type="Area2D"]
+[node name="HarvestTile" type="Area2D" unique_id=363644795]
 script = ExtResource("2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1757654697]
 texture = ExtResource("1")
 hframes = 3
 vframes = 4
 
-[node name="Growth" type="Timer" parent="."]
+[node name="Growth" type="Timer" parent="." unique_id=1131825547]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1760805752]
 shape = SubResource("1")
 
-[node name="SFX_Plant" type="AudioStreamPlayer" parent="."]
+[node name="SFX_Plant" type="AudioStreamPlayer" parent="." unique_id=689751187]
 stream = ExtResource("3")
 
-[node name="SFX_Harvest" type="AudioStreamPlayer" parent="."]
+[node name="SFX_Harvest" type="AudioStreamPlayer" parent="." unique_id=1890968057]
 stream = ExtResource("4")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

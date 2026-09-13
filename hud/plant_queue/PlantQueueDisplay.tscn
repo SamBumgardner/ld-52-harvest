@@ -1,18 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://dv7ulit2h2prr"]
+[gd_scene format=3 uid="uid://dv7ulit2h2prr"]
 
 [ext_resource type="PackedScene" uid="uid://dhto0eh625puj" path="res://hud/plant_queue/CropBadge.tscn" id="1"]
 [ext_resource type="Script" uid="uid://dokaaak645slt" path="res://hud/plant_queue/PlantQueueDisplay.gd" id="2"]
 
-[node name="PlantQueueDisplay" type="Node2D"]
+[node name="PlantQueueDisplay" type="Node2D" unique_id=1349696993]
 script = ExtResource("2")
 
-[node name="CropBadge0" parent="." instance=ExtResource("1")]
+[node name="CropBadge0" parent="." unique_id=1261186940 instance=ExtResource("1")]
 position = Vector2(72, 72)
 
-[node name="CropBadge1" parent="." instance=ExtResource("1")]
+[node name="CropBadge1" parent="." unique_id=2077447933 instance=ExtResource("1")]
 position = Vector2(64, 192)
 scale = Vector2(0.75, 0.75)
 
-[node name="CropBadge2" parent="." instance=ExtResource("1")]
+[node name="CropBadge2" parent="." unique_id=1556831188 instance=ExtResource("1")]
 position = Vector2(64, 296)
 scale = Vector2(0.75, 0.75)
