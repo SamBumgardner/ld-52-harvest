@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://4xseeodqfcce" path="res://audio/ld-52-victory_v1.wav" id="7"]
 
 [sub_resource type="FontFile" id="1"]
-resource_name = ""
 fallbacks = Array[Font]([ExtResource("3")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
@@ -30,7 +29,6 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
 [sub_resource type="FontFile" id="2"]
-resource_name = ""
 fallbacks = Array[Font]([ExtResource("4")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
@@ -52,6 +50,8 @@ cache/0/16/0/scale = 1.0
 
 [node name="LevelCompleteOverlay" type="Popup" unique_id=1661402005]
 oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(600, 400)
 visible = true
 theme = ExtResource("2")
 script = ExtResource("1")
