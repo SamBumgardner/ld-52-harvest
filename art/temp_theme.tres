@@ -3,7 +3,6 @@
 [ext_resource type="FontFile" uid="uid://dylejp7d7stk4" path="res://fonts/Roboto/Roboto-Medium.ttf" id="1"]
 
 [sub_resource type="FontFile" id="1"]
-resource_name = ""
 fallbacks = Array[Font]([ExtResource("1")])
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
