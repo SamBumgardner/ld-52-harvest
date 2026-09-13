@@ -1,21 +1,29 @@
 # ld-52-harvest
+A game originally created for the Ludum Dare 52 game jam in 72 hours.
 
-A game created for Ludum Dare 52 - a family affair.
+## Play the Game
+[Play on itch.io](https://nbumgardner.itch.io/ludum-dare-52)
+
+It's time to hit the fields and farm some points in _Farming Combos_, a fast-paced action/puzzle game!
+
+## How to Run Project Locally
+To run the project locally:
+
+1. Open the project with the Godot editor.
+2. Click the play button (shortcut F5) in the top-right corner.
 
 ## Credits
-
 Team members include:
 
-- Alex Mullins: Artist, created the harvest / plant symbols and crop-tile graphics.
-- Noah Bumgardner: Designer, programmer, composer.
-- Sam Bumgardner: Lead designer, programmer, misc. goalpost-moving.
-- Tom Bumgardner: Artist, made a painting for the thumbnail / menu screens.
+- Sam Bumgardner - lead designer, programmer, misc. goalpost-moving
+- Noah Bumgardner - designer, programmer, composer
+- Alex Mullins - artist, created the harvest / plant symbols and crop-tile graphics
+- Tom Bumgardner - artist, made a painting for the thumbnail / menu screens
 
 ### Attributions
+Closed source resources used:
 
-External resource used:
-
-- 7Soul’s RPG Graphics - Tiles - Grasslands by Henrique "7Soul" Lazarin.
+- [7Soul’s RPG Graphics - Tiles - Grasslands](https://7soul.itch.io/7souls-rpg-graphics-tiles-grasslands) by Henrique "7Soul" Lazarini - @7SoulDesign
 
 Open source resources used:
 
@@ -25,3 +33,7 @@ Coded using the [Godot](https://godotengine.org) game engine.
 
 The original game jam version, tagged as `ld52-submission` and [hosted on itch.io](https://ldjam.com/events/ludum-dare/52/farming-combos), runs on Godot version 3.5.
 The latest stable `main` code branch runs on Godot version 4.4.
+
+### License
+This game's code is open-source under the MIT License.
+Please ask the original artists before using any art or audio assets in a different context.
