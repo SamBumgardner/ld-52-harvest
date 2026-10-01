@@ -16,7 +16,7 @@
 [node name="Main" type="Node" unique_id=1679067491]
 script = ExtResource("4")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1927905351]
+[node name="Background" type="TextureRect" parent="." unique_id=1927905351]
 offset_right = 1025.0
 offset_bottom = 601.0
 texture = ExtResource("2_21e4y")
