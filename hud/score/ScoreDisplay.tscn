@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bh0wo60prvj04"]
 
 [ext_resource type="Script" uid="uid://7vl74gk8lwc6" path="res://hud/score/ScoreDisplay.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://1a1o861m3hmy" path="res://fonts/Roboto/Roboto-BoldItalic.ttf" id="3"]
+[ext_resource type="FontFile" uid="uid://b8r8wfap1fxxq" path="res://fonts/Roboto/Roboto-BoldItalic.ttf" id="3"]
 [ext_resource type="Theme" uid="uid://dalibwjkf0nsp" path="res://themes/gameplay_score_display_score_text_theme.tres" id="3_bff4m"]
 [ext_resource type="Theme" uid="uid://qn5tonktuia0" path="res://themes/title_label_italic_theme.tres" id="3_e7165"]
 [ext_resource type="Script" uid="uid://cax4ab2ts60ay" path="res://hud/score/ChainText.gd" id="4"]
@@ -14,8 +14,21 @@
 [ext_resource type="AudioStream" uid="uid://divhukqxkstyl" path="res://audio/climb-combo/ld-52-climb-combo_6-of-7_v1.wav" id="11"]
 [ext_resource type="AudioStream" uid="uid://cl7i7ljlw5pkv" path="res://audio/climb-combo/ld-52-climb-combo_7-of-7_v1.wav" id="12"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rof0c"]
+bg_color = Color(0, 1, 0.7607843, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21e4y"]
+bg_color = Color(0.88235295, 0.5372549, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [sub_resource type="FontFile" id="2"]
-resource_name = ""
 fallbacks = Array[Font]([ExtResource("3")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
@@ -48,6 +61,7 @@ offset_top = 152.0
 offset_right = 152.0
 offset_bottom = 184.0
 rotation = 4.71239
+theme_override_styles/fill = SubResource("StyleBoxFlat_rof0c")
 show_percentage = false
 
 [node name="ComboTimerDisplay" type="ProgressBar" parent="." unique_id=1059802715]
@@ -55,6 +69,7 @@ offset_left = 32.0
 offset_top = 112.0
 offset_right = 216.0
 offset_bottom = 152.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_21e4y")
 show_percentage = false
 
 [node name="ComboTimer" type="Timer" parent="." unique_id=1139152298]
