@@ -51,6 +51,8 @@ func _ready():
 	
 	_set_up_hacky_plant_queue()
 	_web_cursor_workaround()
+	
+	level_complete_overlay.hide()
 
 func _set_up_hacky_plant_queue():
 	if not $HackyPlantQueue:

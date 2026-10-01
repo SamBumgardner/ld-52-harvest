@@ -1,4 +1,4 @@
-extends Popup
+extends PanelContainer
 
 signal score_tally_complete
 
