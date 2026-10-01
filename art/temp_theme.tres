@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://dnl4dd7ehkwys"]
 
-[ext_resource type="FontFile" uid="uid://dylejp7d7stk4" path="res://fonts/Roboto/Roboto-Medium.ttf" id="1"]
+[ext_resource type="FontFile" uid="uid://db8ejqyao6u48" path="res://fonts/Roboto/Roboto-Medium.ttf" id="1"]
 
 [sub_resource type="FontFile" id="1"]
 fallbacks = Array[Font]([ExtResource("1")])
