@@ -9,10 +9,10 @@ var plant_queue:Resource
 var crops:Array
 var counts:Array
 
-onready var badge0 = $CropBadge0 as CropBadge
-onready var badge1 = $CropBadge1 as CropBadge
-onready var badge2 = $CropBadge2 as CropBadge
-onready var badges = [badge0, badge1, badge2]
+@onready var badge0 = $CropBadge0 as CropBadge
+@onready var badge1 = $CropBadge1 as CropBadge
+@onready var badge2 = $CropBadge2 as CropBadge
+@onready var badges = [badge0, badge1, badge2]
 
 func parent_ready():
 	plant_queue = get_parent().plant_queue

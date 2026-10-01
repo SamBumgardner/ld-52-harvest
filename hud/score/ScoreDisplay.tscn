@@ -1,129 +1,131 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene format=3 uid="uid://bh0wo60prvj04"]
 
-[ext_resource path="res://hud/score/ScoreDisplay.gd" type="Script" id=1]
-[ext_resource path="res://fonts/Roboto/Roboto-Black.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://fonts/Roboto/Roboto-BoldItalic.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://hud/score/ChainText.gd" type="Script" id=4]
-[ext_resource path="res://hud/score/MultiplierText.gd" type="Script" id=5]
-[ext_resource path="res://audio/climb-combo/ld-52-climb-combo_1-of-7_v1.wav" type="AudioStream" id=6]
-[ext_resource path="res://audio/climb-combo/ld-52-climb-combo_2-of-7_v1.wav" type="AudioStream" id=7]
-[ext_resource path="res://audio/climb-combo/ld-52-climb-combo_3-of-7_v1.wav" type="AudioStream" id=8]
-[ext_resource path="res://audio/climb-combo/ld-52-climb-combo_4-of-7_v1.wav" type="AudioStream" id=9]
-[ext_resource path="res://audio/climb-combo/ld-52-climb-combo_5-of-7_v1.wav" type="AudioStream" id=10]
-[ext_resource path="res://audio/climb-combo/ld-52-climb-combo_6-of-7_v1.wav" type="AudioStream" id=11]
-[ext_resource path="res://audio/climb-combo/ld-52-climb-combo_7-of-7_v1.wav" type="AudioStream" id=12]
+[ext_resource type="Script" uid="uid://7vl74gk8lwc6" path="res://hud/score/ScoreDisplay.gd" id="1"]
+[ext_resource type="FontFile" uid="uid://b8r8wfap1fxxq" path="res://fonts/Roboto/Roboto-BoldItalic.ttf" id="3"]
+[ext_resource type="Theme" uid="uid://dalibwjkf0nsp" path="res://themes/gameplay_score_display_score_text_theme.tres" id="3_bff4m"]
+[ext_resource type="Theme" uid="uid://d1p4214aadjb3" path="res://themes/score_multiplier_font_theme.tres" id="3_e7165"]
+[ext_resource type="Script" uid="uid://cax4ab2ts60ay" path="res://hud/score/ChainText.gd" id="4"]
+[ext_resource type="Script" uid="uid://bb81sw30dcjh6" path="res://hud/score/MultiplierText.gd" id="5"]
+[ext_resource type="AudioStream" uid="uid://dcqnsy34pvtbc" path="res://audio/climb-combo/ld-52-climb-combo_1-of-7_v1.wav" id="6"]
+[ext_resource type="AudioStream" uid="uid://bmi6wvubtnkod" path="res://audio/climb-combo/ld-52-climb-combo_2-of-7_v1.wav" id="7"]
+[ext_resource type="AudioStream" uid="uid://cxhe6vo76w4he" path="res://audio/climb-combo/ld-52-climb-combo_3-of-7_v1.wav" id="8"]
+[ext_resource type="AudioStream" uid="uid://cmrjylfjsgkcq" path="res://audio/climb-combo/ld-52-climb-combo_4-of-7_v1.wav" id="9"]
+[ext_resource type="AudioStream" uid="uid://bcoclaoieg7t8" path="res://audio/climb-combo/ld-52-climb-combo_5-of-7_v1.wav" id="10"]
+[ext_resource type="AudioStream" uid="uid://divhukqxkstyl" path="res://audio/climb-combo/ld-52-climb-combo_6-of-7_v1.wav" id="11"]
+[ext_resource type="AudioStream" uid="uid://cl7i7ljlw5pkv" path="res://audio/climb-combo/ld-52-climb-combo_7-of-7_v1.wav" id="12"]
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 1, 0.760784, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 0.8, 0.8, 0.8, 0 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rof0c"]
+bg_color = Color(0, 1, 0.7607843, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.882353, 0.537255, 0, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 0.8, 0.8, 0.8, 0 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_21e4y"]
+bg_color = Color(0.88235295, 0.5372549, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
-[sub_resource type="DynamicFont" id=1]
-size = 32
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/72/0/ascent = 0.0
+cache/0/72/0/descent = 0.0
+cache/0/72/0/underline_position = 0.0
+cache/0/72/0/underline_thickness = 0.0
+cache/0/72/0/scale = 1.0
 
-[sub_resource type="DynamicFont" id=2]
-size = 72
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
+[node name="ScoreDisplay" type="Node2D" unique_id=1050314330]
+script = ExtResource("1")
 
-[node name="ScoreDisplay" type="Node2D"]
-position = Vector2( 16, 400 )
-script = ExtResource( 1 )
+[node name="ComboGrowth" type="ProgressBar" parent="." unique_id=1209094421]
+offset_top = 152.0
+offset_right = 152.0
+offset_bottom = 184.0
+rotation = 4.71239
+theme_override_styles/fill = SubResource("StyleBoxFlat_rof0c")
+show_percentage = false
 
-[node name="ComboGrowth" type="ProgressBar" parent="."]
-margin_top = 152.0
-margin_right = 152.0
-margin_bottom = 184.0
-rect_rotation = 270.0
-custom_styles/fg = SubResource( 3 )
-percent_visible = false
+[node name="ComboTimerDisplay" type="ProgressBar" parent="." unique_id=1059802715]
+offset_left = 32.0
+offset_top = 112.0
+offset_right = 216.0
+offset_bottom = 152.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_21e4y")
+show_percentage = false
 
-[node name="ComboTimerDisplay" type="ProgressBar" parent="."]
-margin_left = 32.0
-margin_top = 112.0
-margin_right = 216.0
-margin_bottom = 152.0
-custom_styles/fg = SubResource( 4 )
-percent_visible = false
-
-[node name="ComboTimer" type="Timer" parent="."]
-process_mode = 0
+[node name="ComboTimer" type="Timer" parent="." unique_id=1139152298]
 one_shot = true
 
-[node name="GraceTimer" type="Timer" parent="."]
-process_mode = 0
+[node name="GraceTimer" type="Timer" parent="." unique_id=408442142]
 one_shot = true
 
-[node name="ScoreText" type="Label" parent="."]
-margin_left = 16.0
-margin_top = 152.0
-margin_right = 176.0
-margin_bottom = 192.0
-custom_fonts/font = SubResource( 1 )
+[node name="ScoreText" type="Label" parent="." unique_id=1524425720]
+offset_left = 16.0
+offset_top = 152.0
+offset_right = 176.0
+offset_bottom = 192.0
+theme = ExtResource("3_bff4m")
 text = "0"
 
-[node name="MultiplierText" type="Label" parent="."]
-margin_left = 56.0
-margin_top = 16.0
-margin_right = 184.0
-margin_bottom = 101.0
-custom_fonts/font = SubResource( 2 )
+[node name="MultiplierText" type="Label" parent="." unique_id=1649598046]
+offset_left = 56.0
+offset_top = 16.0
+offset_right = 184.0
+offset_bottom = 101.0
+theme = ExtResource("3_e7165")
 text = "x1"
-script = ExtResource( 5 )
+script = ExtResource("5")
 
-[node name="ChainText" type="Label" parent="."]
-margin_left = 304.0
-margin_top = -376.0
-margin_right = 688.0
-margin_bottom = -291.0
+[node name="ChainText" type="Label" parent="." unique_id=948423020]
+offset_left = 304.0
+offset_top = -376.0
+offset_right = 688.0
+offset_bottom = -291.0
 grow_horizontal = 2
-custom_fonts/font = SubResource( 2 )
-align = 1
-script = ExtResource( 4 )
+theme = ExtResource("3_e7165")
+theme_override_fonts/font = SubResource("2")
+horizontal_alignment = 1
+script = ExtResource("4")
 
-[node name="SFX_IncrementComboTo2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+[node name="SFX_IncrementComboTo2" type="AudioStreamPlayer" parent="." unique_id=1236973349]
+stream = ExtResource("6")
 
-[node name="SFX_IncrementComboTo3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+[node name="SFX_IncrementComboTo3" type="AudioStreamPlayer" parent="." unique_id=1770886847]
+stream = ExtResource("7")
 
-[node name="SFX_IncrementComboTo4" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+[node name="SFX_IncrementComboTo4" type="AudioStreamPlayer" parent="." unique_id=270608234]
+stream = ExtResource("8")
 
-[node name="SFX_IncrementComboTo5" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+[node name="SFX_IncrementComboTo5" type="AudioStreamPlayer" parent="." unique_id=1367869989]
+stream = ExtResource("9")
 
-[node name="SFX_IncrementComboTo6" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+[node name="SFX_IncrementComboTo6" type="AudioStreamPlayer" parent="." unique_id=58578598]
+stream = ExtResource("10")
 
-[node name="SFX_IncrementComboTo7" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
+[node name="SFX_IncrementComboTo7" type="AudioStreamPlayer" parent="." unique_id=266684830]
+stream = ExtResource("11")
 
-[node name="SFX_IncrementComboTo8" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
+[node name="SFX_IncrementComboTo8" type="AudioStreamPlayer" parent="." unique_id=331357325]
+stream = ExtResource("12")
 
 [connection signal="crop_chain_changed" from="." to="ChainText" method="_on_ScoreDisplay_crop_chain_changed"]
 [connection signal="multiplier_changed" from="." to="MultiplierText" method="_on_ScoreDisplay_multiplier_changed"]

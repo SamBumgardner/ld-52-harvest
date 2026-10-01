@@ -4,7 +4,6 @@ class_name ScoreDisplay
 
 signal multiplier_changed
 signal crop_chain_changed
-signal final_score
 
 const RIPE_GROWTH_STAGE = 4
 const MAX_MULTIPLIER = 8
@@ -27,13 +26,13 @@ var combo_growth_current = 0
 var multiplier = 1
 var plants_since_last_harvest = 0
 
-onready var chain_text = $ChainText as Label
-onready var multiplier_text = $MultiplierText as Label
-onready var score_text = $ScoreText as Label
-onready var grace_timer = $GraceTimer as Timer
-onready var combo_timer = $ComboTimer as Timer
-onready var combo_timer_display = $ComboTimerDisplay as ProgressBar
-onready var combo_growth = $ComboGrowth as ProgressBar
+@onready var chain_text = $ChainText as Label
+@onready var multiplier_text = $MultiplierText as Label
+@onready var score_text = $ScoreText as Label
+@onready var grace_timer = $GraceTimer as Timer
+@onready var combo_timer = $ComboTimer as Timer
+@onready var combo_timer_display = $ComboTimerDisplay as ProgressBar
+@onready var combo_growth = $ComboGrowth as ProgressBar
 
 func _on_tile_planted(_crop_type):
 	if (plants_since_last_harvest < MAX_PLANT_GRACE_COUNT - multiplier):
@@ -113,22 +112,22 @@ func _process(_delta):
 func _update_combo_timer_display():
 	combo_timer_display.value = combo_timer.time_left / combo_timer.wait_time * 100
 
-func _play_sfx_increment_combo(multiplier):
-	if multiplier < MIN_MULTIPLIER + 1 or multiplier > MAX_MULTIPLIER:
+func _play_sfx_increment_combo(multiplier_at_time_of_trigger):
+	if (multiplier_at_time_of_trigger < MIN_MULTIPLIER + 1 or multiplier_at_time_of_trigger > MAX_MULTIPLIER):
 		return
-	elif multiplier == 2:
+	elif multiplier_at_time_of_trigger == 2:
 		$SFX_IncrementComboTo2.play()
-	elif multiplier == 3:
+	elif multiplier_at_time_of_trigger == 3:
 		$SFX_IncrementComboTo3.play()
-	elif multiplier == 4:
+	elif multiplier_at_time_of_trigger == 4:
 		$SFX_IncrementComboTo4.play()
-	elif multiplier == 5:
+	elif multiplier_at_time_of_trigger == 5:
 		$SFX_IncrementComboTo5.play()
-	elif multiplier == 6:
+	elif multiplier_at_time_of_trigger == 6:
 		$SFX_IncrementComboTo6.play()
-	elif multiplier == 7:
+	elif multiplier_at_time_of_trigger == 7:
 		$SFX_IncrementComboTo7.play()
-	elif multiplier == 8:
+	elif multiplier_at_time_of_trigger == 8:
 		$SFX_IncrementComboTo8.play()
 	else:
 		return

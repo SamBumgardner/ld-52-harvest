@@ -31,7 +31,8 @@ Open source resources used:
 
 Coded using the [Godot](https://godotengine.org) game engine.
 
-The original game jam version, tagged as `ld52-submission` and [hosted on itch.io](https://nbumgardner.itch.io/ludum-dare-52), runs on Godot version 3.x.
+The original game jam version, tagged as `ld52-submission` and [hosted on itch.io](https://ldjam.com/events/ludum-dare/52/farming-combos), runs on Godot version 3.5.
+The latest stable `main` code branch runs on Godot version 4.7.2.
 
 ### License
 This game's code is open-source under the MIT License.
