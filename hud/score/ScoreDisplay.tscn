@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://7vl74gk8lwc6" path="res://hud/score/ScoreDisplay.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://b8r8wfap1fxxq" path="res://fonts/Roboto/Roboto-BoldItalic.ttf" id="3"]
 [ext_resource type="Theme" uid="uid://dalibwjkf0nsp" path="res://themes/gameplay_score_display_score_text_theme.tres" id="3_bff4m"]
-[ext_resource type="Theme" uid="uid://qn5tonktuia0" path="res://themes/title_label_italic_theme.tres" id="3_e7165"]
+[ext_resource type="Theme" uid="uid://d1p4214aadjb3" path="res://themes/score_multiplier_font_theme.tres" id="3_e7165"]
 [ext_resource type="Script" uid="uid://cax4ab2ts60ay" path="res://hud/score/ChainText.gd" id="4"]
 [ext_resource type="Script" uid="uid://bb81sw30dcjh6" path="res://hud/score/MultiplierText.gd" id="5"]
 [ext_resource type="AudioStream" uid="uid://dcqnsy34pvtbc" path="res://audio/climb-combo/ld-52-climb-combo_1-of-7_v1.wav" id="6"]
@@ -101,6 +101,7 @@ offset_top = -376.0
 offset_right = 688.0
 offset_bottom = -291.0
 grow_horizontal = 2
+theme = ExtResource("3_e7165")
 theme_override_fonts/font = SubResource("2")
 horizontal_alignment = 1
 script = ExtResource("4")
