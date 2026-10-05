@@ -1,87 +1,136 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene format=3 uid="uid://c4sq53nq1x2m4"]
 
-[ext_resource path="res://hud/level_complete_overlay/LevelCompleteOverlay.gd" type="Script" id=1]
-[ext_resource path="res://art/temp_theme.tres" type="Theme" id=2]
-[ext_resource path="res://fonts/Roboto/Roboto-BlackItalic.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://fonts/Roboto/Roboto-Medium.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://art/empty_star.png" type="Texture" id=5]
-[ext_resource path="res://art/filled_star.png" type="Texture" id=6]
-[ext_resource path="res://audio/ld-52-victory_v1.wav" type="AudioStream" id=7]
+[ext_resource type="Script" uid="uid://is2fdi3bqm6e" path="res://hud/level_complete_overlay/LevelCompleteOverlay.gd" id="1"]
+[ext_resource type="Theme" uid="uid://dnl4dd7ehkwys" path="res://art/temp_theme.tres" id="2"]
+[ext_resource type="Theme" uid="uid://bert1l3yif1oe" path="res://themes/harvest_complete_font_title_theme.tres" id="3_p8huc"]
+[ext_resource type="FontFile" uid="uid://db8ejqyao6u48" path="res://fonts/Roboto/Roboto-Medium.ttf" id="4"]
+[ext_resource type="Theme" uid="uid://vqruqoyiqoxe" path="res://themes/harvest_complete_font_size_medium_theme.tres" id="4_ugeyg"]
+[ext_resource type="Texture2D" uid="uid://b31eyrmf8jsh3" path="res://art/empty_star.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://byyjlo6r8w48l" path="res://art/filled_star.png" id="6"]
+[ext_resource type="AudioStream" uid="uid://4xseeodqfcce" path="res://audio/ld-52-victory_v1.wav" id="7"]
 
-[sub_resource type="DynamicFont" id=1]
-size = 58
-font_data = ExtResource( 3 )
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("4")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
 
-[sub_resource type="DynamicFont" id=2]
-size = 32
-font_data = ExtResource( 4 )
+[node name="LevelCompleteOverlay" type="PanelContainer" unique_id=1440214548]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2")
+script = ExtResource("1")
 
-[node name="LevelCompleteOverlay" type="Popup"]
+[node name="Panel" type="Panel" parent="." unique_id=692456172]
+layout_mode = 2
+theme = ExtResource("2")
+
+[node name="Background" type="ColorRect" parent="Panel" unique_id=159327921]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -400.0
-margin_bottom = -200.0
 grow_horizontal = 2
-theme = ExtResource( 2 )
-script = ExtResource( 1 )
+grow_vertical = 2
+color = Color(0.14509805, 0.14509805, 0.16470589, 1)
 
-[node name="Panel" type="Panel" parent="."]
-margin_right = 624.0
-margin_bottom = 400.0
-theme = ExtResource( 2 )
-
-[node name="Title" type="Label" parent="Panel"]
-margin_right = 624.0
-margin_bottom = 85.0
-custom_fonts/font = SubResource( 1 )
+[node name="Title" type="Label" parent="Panel" unique_id=1553009576]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 85.0
+theme = ExtResource("3_p8huc")
 text = "HARVEST COMPLETE"
-align = 1
+horizontal_alignment = 1
 clip_text = true
 
-[node name="Score" type="Label" parent="Panel"]
-margin_left = 212.0
-margin_top = 82.0
-margin_right = 412.0
-margin_bottom = 161.0
+[node name="Score" type="Label" parent="Panel" unique_id=1775623294]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 82.0
+offset_right = 412.0
+offset_bottom = 161.0
 grow_horizontal = 2
-rect_pivot_offset = Vector2( 100, 0 )
-custom_fonts/font = SubResource( 2 )
+pivot_offset = Vector2(100, 0)
+theme = ExtResource("4_ugeyg")
+theme_override_fonts/font = SubResource("2")
 text = "Score:
 00000"
-align = 1
+horizontal_alignment = 1
 
-[node name="StarProgress" type="TextureProgress" parent="Panel"]
-margin_left = 203.0
-margin_top = 173.0
-margin_right = 1103.0
-margin_bottom = 473.0
-rect_scale = Vector2( 0.25, 0.25 )
+[node name="StarProgress" type="TextureProgressBar" parent="Panel" unique_id=1537520895]
+layout_mode = 0
+offset_left = 203.0
+offset_top = 173.0
+offset_right = 1103.0
+offset_bottom = 473.0
+scale = Vector2(0.25, 0.25)
 max_value = 300.0
 value = 3.0
-texture_under = ExtResource( 5 )
-texture_progress = ExtResource( 6 )
+texture_under = ExtResource("5")
+texture_progress = ExtResource("6")
 
-[node name="NextStar" type="Label" parent="Panel"]
-margin_left = 212.0
-margin_top = 257.0
-margin_right = 412.0
-margin_bottom = 336.0
+[node name="NextStar" type="Label" parent="Panel" unique_id=847585948]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 257.0
+offset_right = 412.0
+offset_bottom = 336.0
 grow_horizontal = 2
-rect_pivot_offset = Vector2( 100, 0 )
-custom_fonts/font = SubResource( 2 )
+pivot_offset = Vector2(100, 0)
+theme = ExtResource("4_ugeyg")
+theme_override_fonts/font = SubResource("2")
 text = "Next Star at:
 00000"
-align = 1
+horizontal_alignment = 1
 
-[node name="LevelSelectButton" type="Button" parent="Panel"]
-margin_left = 231.0
-margin_top = 352.0
-margin_right = 393.0
-margin_bottom = 377.0
+[node name="LevelSelectButton" type="Button" parent="Panel" unique_id=1399055061]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 352.0
+offset_right = 393.0
+offset_bottom = 377.0
 size_flags_horizontal = 0
 text = "Back To Level Select"
 
-[node name="Music_Victory" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+[node name="Music_Victory" type="AudioStreamPlayer" parent="." unique_id=1439493634]
+stream = ExtResource("7")
 
 [connection signal="pressed" from="Panel/LevelSelectButton" to="." method="_on_LevelSelectButton_pressed"]

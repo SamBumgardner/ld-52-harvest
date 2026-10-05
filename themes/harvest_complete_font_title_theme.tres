@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://bert1l3yif1oe"]
+
+[ext_resource type="FontFile" uid="uid://b8r8wfap1fxxq" path="res://fonts/Roboto/Roboto-BoldItalic.ttf" id="1_0b785"]
+
+[resource]
+default_font = ExtResource("1_0b785")
+default_font_size = 56
